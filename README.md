@@ -1,5 +1,5 @@
-# incredibletheme
-WordPress theme for custom builds.
+# designstudio
+WordPress theme for template builds.
 
 ## Assets
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
