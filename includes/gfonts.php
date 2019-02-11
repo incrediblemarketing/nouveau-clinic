@@ -23,14 +23,14 @@ function _remove_empty_internal($value) {
   return !empty($value) || $value === 0;
 }
 
-function linje_custom_styles($custom) {
+function im_fonts_custom_styles($custom) {
     //Fonts
-    $headings_font_h1 = esc_html(get_theme_mod('linje_h1_fonts'));
-    $headings_font_h2 = esc_html(get_theme_mod('linje_h2_fonts'));
-    $headings_font_h3 = esc_html(get_theme_mod('linje_h3_fonts'));
-    $headings_font_h4 = esc_html(get_theme_mod('linje_h4_fonts'));
-    $headings_font_h5 = esc_html(get_theme_mod('linje_h5_fonts'));
-    $headings_font_h6 = esc_html(get_theme_mod('linje_h6_fonts'));
+    $headings_font_h1 = esc_html(get_theme_mod('im_fonts_h1_fonts'));
+    $headings_font_h2 = esc_html(get_theme_mod('im_fonts_h2_fonts'));
+    $headings_font_h3 = esc_html(get_theme_mod('im_fonts_h3_fonts'));
+    $headings_font_h4 = esc_html(get_theme_mod('im_fonts_h4_fonts'));
+    $headings_font_h5 = esc_html(get_theme_mod('im_fonts_h5_fonts'));
+    $headings_font_h6 = esc_html(get_theme_mod('im_fonts_h6_fonts'));
     $headings_font =  array(
                         'h1' => $headings_font_h1,
                         'h2' => $headings_font_h2,
@@ -48,7 +48,7 @@ function linje_custom_styles($custom) {
     // echo '</pre>';
 
     // die();
-    $body_font = esc_html(get_theme_mod('linje_body_fonts'));
+    $body_font = esc_html(get_theme_mod('im_fonts_body_fonts'));
     if ( $headings_font ) {
         foreach($headings_font as $key => $value) {
             // $custom .= $font_heading
@@ -67,8 +67,8 @@ function linje_custom_styles($custom) {
     //Output all the styles
     wp_add_inline_style( 'style', $custom );
 }
-add_action( 'wp_enqueue_scripts', 'linje_custom_styles' );
+add_action( 'wp_enqueue_scripts', 'im_fonts_custom_styles' );
 //Sanitizes Fonts
-function linje_sanitize_fonts( $input ) {
+function im_fonts_sanitize_fonts( $input ) {
     return $input;
 }
