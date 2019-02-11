@@ -12,6 +12,12 @@ require_once get_template_directory() . '/includes/styles.php';
 // ==================================================
 require_once get_template_directory() . '/includes/scripts.php';
 
+
+// Customizer
+// ==================================================
+require_once get_template_directory() . '/includes/google-fonts-customizer.php';
+
+
 // ADVANCED CUSTOM FIELDS
 // ==================================================
 require_once get_template_directory() . '/includes/acf/options-pages.php';
