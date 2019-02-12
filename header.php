@@ -15,7 +15,7 @@
 	<![endif]-->
 </head>
 <body <?php body_class(); ?>>
-test push
+
 	<div class="site-wrap">
 	
 		<?php get_template_part('components/site-nav-static'); ?>
