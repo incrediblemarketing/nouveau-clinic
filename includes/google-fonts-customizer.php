@@ -33,7 +33,7 @@ class theme_customizer {
         $headings_font_h4 = esc_html(get_theme_mod('im_fonts_h4_fonts'));
         $headings_font_h5 = esc_html(get_theme_mod('im_fonts_h5_fonts'));
         $headings_font_h6 = esc_html(get_theme_mod('im_fonts_h6_fonts'));
-        $body_font = esc_html(get_theme_mod('im_fonts_body_fonts'));
+        $body_font = esc_html(get_theme_mod('im_fonts_body_family'));
         
         if($body_font != NULL) {
             $font_pieces_body = explode(':', $headings_font_body);
@@ -114,11 +114,11 @@ class theme_customizer {
             'panel'  => 'google_fonts_panel',
         ) );
 
-        $wp_manager->add_setting( 'im_fonts_body_fonts', array(
+        $wp_manager->add_setting( 'im_fonts_body_family', array(
                 'sanitize_callback' => 'im_fonts_sanitize_fonts'
             )
         );
-        $wp_manager->add_control( 'im_fonts_body_fonts', array(
+        $wp_manager->add_control( 'im_fonts_body_family', array(
                 'label' => 'Font Family',
                 'type' => 'select',
                 'description' => __( 'Select your desired font for the body.', 'im_fonts' ),
@@ -174,11 +174,11 @@ class theme_customizer {
                 'choices' => $font_choices
             )
         );
-        $wp_manager->add_setting( 'im_fonts_h1_fonts', array(
+        $wp_manager->add_setting( 'im_fonts_h1_family', array(
                 'sanitize_callback' => 'im_fonts_sanitize_fonts',
             )
         );
-        $wp_manager->add_control( 'im_fonts_h1_fonts', array(
+        $wp_manager->add_control( 'im_fonts_h1_family', array(
                 'label' => 'Font Family',
                 'type' => 'select',
                 'description' => __('Select your desired font for the <strong>h1\'s</strong>', 'im_fonts'),
@@ -235,11 +235,11 @@ class theme_customizer {
             )
         );
 
-        $wp_manager->add_setting( 'im_fonts_h2_fonts', array(
+        $wp_manager->add_setting( 'im_fonts_h2_family', array(
                 'sanitize_callback' => 'im_fonts_sanitize_fonts',
             )
         );
-        $wp_manager->add_control( 'im_fonts_h2_fonts', array(
+        $wp_manager->add_control( 'im_fonts_h2_family', array(
                 'label' => 'Font Family',
                 'type' => 'select',
                 'description' => __('Select your desired font for the <strong>h2\'s</strong>.', 'im_fonts'),
@@ -295,11 +295,11 @@ class theme_customizer {
                 'choices' => $font_choices
             )
         );
-        $wp_manager->add_setting( 'im_fonts_h3_fonts', array(
+        $wp_manager->add_setting( 'im_fonts_h3_family', array(
                 'sanitize_callback' => 'im_fonts_sanitize_fonts',
             )
         );
-        $wp_manager->add_control( 'im_fonts_h3_fonts', array(
+        $wp_manager->add_control( 'im_fonts_h3_family', array(
                 'label' => 'Font Weight',
                 'type' => 'select',
                 'description' => __('Select your desired font for the <strong>h3\'s</strong>', 'im_fonts'),
@@ -355,11 +355,11 @@ class theme_customizer {
                 'choices' => $font_choices
             )
         );
-        $wp_manager->add_setting( 'im_fonts_h4_fonts', array(
+        $wp_manager->add_setting( 'im_fonts_h4_family', array(
                 'sanitize_callback' => 'im_fonts_sanitize_fonts',
             )
         );
-        $wp_manager->add_control( 'im_fonts_h4_fonts', array(
+        $wp_manager->add_control( 'im_fonts_h4_family', array(
                 'label' => 'Font Family',
                 'type' => 'select',
                 'description' => __('Select your desired font for the <strong>h4\'s</strong>', 'im_fonts'),
@@ -415,11 +415,11 @@ class theme_customizer {
                 'choices' => $font_choices
             )
         );
-        $wp_manager->add_setting( 'im_fonts_h5_fonts', array(
+        $wp_manager->add_setting( 'im_fonts_h5_family', array(
                 'sanitize_callback' => 'im_fonts_sanitize_fonts',
             )
         );
-        $wp_manager->add_control( 'im_fonts_h5_fonts', array(
+        $wp_manager->add_control( 'im_fonts_h5_family', array(
                 'label' => 'Font Family',
                 'type' => 'select',
                 'description' => __('Select your desired font for the <strong>h5\'s</strong>.', 'im_fonts'),
@@ -475,11 +475,11 @@ class theme_customizer {
                 'choices' => $font_choices
             )
         );
-        $wp_manager->add_setting( 'im_fonts_h6_fonts', array(
+        $wp_manager->add_setting( 'im_fonts_h6_family', array(
                 'sanitize_callback' => 'im_fonts_sanitize_fonts',
             )
         );
-        $wp_manager->add_control( 'im_fonts_h6_fonts', array(
+        $wp_manager->add_control( 'im_fonts_h6_family', array(
                 'label' => 'Font Family',
                 'type' => 'select',
                 'description' => __('Select your desired font for the <strong>h6\'s</strong>', 'im_fonts'),

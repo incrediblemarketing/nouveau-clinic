@@ -25,12 +25,12 @@ function _remove_empty_internal($value) {
 
 function im_fonts_custom_styles($custom) {
     //Fonts
-    $headings_font_h1 = esc_html(get_theme_mod('im_fonts_h1_fonts'));
-    $headings_font_h2 = esc_html(get_theme_mod('im_fonts_h2_fonts'));
-    $headings_font_h3 = esc_html(get_theme_mod('im_fonts_h3_fonts'));
-    $headings_font_h4 = esc_html(get_theme_mod('im_fonts_h4_fonts'));
-    $headings_font_h5 = esc_html(get_theme_mod('im_fonts_h5_fonts'));
-    $headings_font_h6 = esc_html(get_theme_mod('im_fonts_h6_fonts'));
+    $headings_font_h1 = esc_html(get_theme_mod('im_fonts_h1_family'));
+    $headings_font_h2 = esc_html(get_theme_mod('im_fonts_h2_family'));
+    $headings_font_h3 = esc_html(get_theme_mod('im_fonts_h3_family'));
+    $headings_font_h4 = esc_html(get_theme_mod('im_fonts_h4_family'));
+    $headings_font_h5 = esc_html(get_theme_mod('im_fonts_h5_family'));
+    $headings_font_h6 = esc_html(get_theme_mod('im_fonts_h6_family'));
 
 
 
@@ -52,7 +52,7 @@ function im_fonts_custom_styles($custom) {
     // echo '</pre>';
 
     // die();
-    $body_font = esc_html(get_theme_mod('im_fonts_body_fonts'));
+    $body_font = esc_html(get_theme_mod('im_fonts_body_family'));
     if ( $headings_font ) {
         foreach($headings_font as $key => $value) {
             // $custom .= $font_heading

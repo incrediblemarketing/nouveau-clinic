@@ -29,6 +29,9 @@ add_action('wp_enqueue_scripts', 'im_enqueue_scripts');
 
 
 function enqueue_theme_customizer() {
-    wp_enqueue_script('theme-customizer', get_template_directory_uri() . '/assets/dist/js/customizer/theme-customizer.min.js');    
+    global $wp_customize;
+    if ( isset( $wp_customize ) ) { 
+        wp_enqueue_script('theme-customizer', get_template_directory_uri() . '/assets/dist/js/customizer/theme-customizer.min.js', array('jquery'));    
+    }
 }
 add_action('admin_enqueue_scripts', 'enqueue_theme_customizer');
