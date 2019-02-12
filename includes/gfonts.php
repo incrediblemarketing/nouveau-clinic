@@ -31,6 +31,10 @@ function im_fonts_custom_styles($custom) {
     $headings_font_h4 = esc_html(get_theme_mod('im_fonts_h4_fonts'));
     $headings_font_h5 = esc_html(get_theme_mod('im_fonts_h5_fonts'));
     $headings_font_h6 = esc_html(get_theme_mod('im_fonts_h6_fonts'));
+
+
+
+
     $headings_font =  array(
                         'h1' => $headings_font_h1,
                         'h2' => $headings_font_h2,
@@ -53,8 +57,36 @@ function im_fonts_custom_styles($custom) {
         foreach($headings_font as $key => $value) {
             // $custom .= $font_heading
             $font_pieces = explode(':', $value);
-            $custom .= $key . "{font-family: {$font_pieces[0]};}"."\n";
-            
+            $font_weight = 'im_fonts_' . $key . '_weight';
+
+            $font_weight = esc_html(get_theme_mod($font_weight));
+
+            if($font_weight != '') {
+                $font_weight = explode(',', $font_pieces[1])[$font_weight];
+                $font_style  = $font_weight;
+                if(!preg_match('/^\d+$/', $font_style)){
+                    $font_style = preg_replace('/[0-9]+/', '', $font_style);
+                    if($font_style == 'regular') {
+                        $font_style = 'normal';
+                    }
+                    $font_style = 'font-style:' . $font_style .';';
+                } else {
+                    $font_style = '';
+                }
+
+                $font_weight = preg_replace("/[^0-9]/", "", $font_weight);
+                if($font_weight != '') {
+                    $font_weight = 'font-weight:' . $font_weight . ';';
+                } else {
+                    $font_weight = '';
+                }
+                
+
+
+            } else {
+                $font_weight = '';
+            }
+            $custom .= $key . "," . $key . "{font-family: {$font_pieces[0]}; " . $font_weight . $font_style . "}"."\n";
         }
         // $font_pieces = explode(":", $headings_font);
         // $custom .= "h1, h2, h3, h4, h5, h6 { font-family: {$font_pieces[0]}; }"."\n";

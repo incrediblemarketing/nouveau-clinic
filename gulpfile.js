@@ -119,7 +119,7 @@ gulp.task('styles', function () {
  * Look at src/js/plugins and concatenate those files, send them to assets/dist/js where we then minimize the concatenated file.
 */
 gulp.task('pluginsJs', function() {
-    return  gulp.src(['./assets/src/js/plugins/*.js', '!./assets/src/js/plugins/modernizr-3.0.0.min.js'])
+    return  gulp.src(['./assets/src/js/plugins/*.js', '!./assets/src/js/plugins/modernizr-3.0.0.min.js', '!./assets/src/js/customizer/theme-customizer.min.js'])
         .pipe(concat('plugins.js'))
         .pipe(gulp.dest('./assets/dist/js/'))
         .pipe(rename( {
@@ -149,6 +149,26 @@ gulp.task('scriptsJs', function() {
         .pipe(uglify())
         .pipe(gulp.dest('./assets/dist/js/'))
         .pipe(notify({ message: 'Main scripts task complete', onLast: true }))
+        .pipe(browserSync.stream({once: true}));
+});
+
+/**
+ * Scripts: Main
+ *
+ * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
+*/
+
+gulp.task('customizerJs', function() {
+    return  gulp.src('./assets/src/js/customizer/theme-customizer.js')
+        .pipe(concat('theme-customizer.js'))
+        .pipe(gulp.dest('./assets/dist/js/customizer/'))
+        .pipe(rename( {
+            basename: "theme-customizer",
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('./assets/dist/js/customizer/'))
+        .pipe(notify({ message: 'Customizer scripts task complete', onLast: true }))
         .pipe(browserSync.stream({once: true}));
 });
 
@@ -262,7 +282,7 @@ gulp.task('copy', function() {
 
    // Package Distributable Theme
    gulp.task('build', function(cb) {
-    runSequence('styles', 'cleanup', 'pluginsJs', 'scriptsJs', 'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
+    runSequence('styles', 'cleanup', 'pluginsJs', 'scriptsJs', 'customizerJs', 'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
    });
 
 
@@ -292,9 +312,9 @@ gulp.task('copy', function() {
         });
         gulp.watch('./assets/src/img/raw/**/*.{png,jpg,gif}', ['images']);
         gulp.watch('./assets/src/sass/**/*.scss', ['styles']);
-        gulp.watch('./assets/src/js/**/*.js', ['scriptsJs', 'pluginsJs']);
+        gulp.watch('./assets/src/js/**/*.js', ['scriptsJs', 'pluginsJs', 'customizerJs']);
 
    });
 
 
-   gulp.task('default', ['styles', 'pluginsJs', 'scriptsJs', 'images', 'copy', 'watch']);
+   gulp.task('default', ['styles', 'pluginsJs', 'scriptsJs', 'customizerJs', 'images', 'copy', 'watch']);
