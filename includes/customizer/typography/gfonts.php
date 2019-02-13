@@ -73,6 +73,8 @@ function im_fonts_custom_styles($custom) {
             $font_weight = esc_html(get_theme_mod($font_weight));
 
             $size = '';
+            $font_style = '';
+            
             $size = getFontSizes($key, 'mobile');
 
             $font_transform = 'im_fonts_' . $key . '_transform';
@@ -132,6 +134,7 @@ function im_fonts_custom_styles($custom) {
             } else {
                 $font_weight = '';
             }
+
 
             $custom .= $key . ", ." . $key . "{" . $font_family . $font_weight . $font_style . "color: " . $font_color . ";" . $size . $margin . $font_transform . $font_letterspacing . $font_lineheight ."}"."\n";
         // }
