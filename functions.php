@@ -13,11 +13,6 @@ require_once get_template_directory() . '/includes/styles.php';
 require_once get_template_directory() . '/includes/scripts.php';
 
 
-// Customizer
-// ==================================================
-require_once get_template_directory() . '/includes/google-fonts-customizer.php';
-
-
 // ADVANCED CUSTOM FIELDS
 // ==================================================
 require_once get_template_directory() . '/includes/acf/options-pages.php';
@@ -44,9 +39,16 @@ require_once get_template_directory() . '/includes/image-sizes.php';
 // ==================================================
 require_once get_template_directory() . '/includes/custom-functions.php';
 
+
 // FILTERS
 // ==================================================
 require_once get_template_directory() . '/includes/filters.php';
+
+
+// Customizer
+// ==================================================
+require_once get_template_directory() . '/includes/customizer/customizer.php';
+
 
 // SIDEBARS
 // ==================================================
