@@ -130,7 +130,7 @@ function im_fonts_custom_styles($custom) {
                 $font_weight = '';
             }
 
-            $custom .= $key . "," . $key . "{" . $font_family . $font_weight . $font_style . "color: " . $font_color . ";" . $size . $margin . $font_transform . $font_letterspacing . $font_lineheight ."}"."\n";
+            $custom .= $key . ", ." . $key . "{" . $font_family . $font_weight . $font_style . "color: " . $font_color . ";" . $size . $margin . $font_transform . $font_letterspacing . $font_lineheight ."}"."\n";
         // }
         // $font_pieces = explode(":", $headings_font);
         // $custom .= "h1, h2, h3, h4, h5, h6 { font-family: {$font_pieces[0]}; }"."\n";
@@ -167,7 +167,10 @@ function im_fonts_custom_styles($custom) {
         } else {
             $margin = '';
         }
-        $custom .= $key . "," . $key . "{" . $size . $margin . "}"."\n";
+        if($size || $margin) {
+            $custom .= $key . ", ." . $key . "{" . $size . $margin . "}"."\n";    
+        }
+        
     }
     $custom .= "}";
 
@@ -187,7 +190,9 @@ function im_fonts_custom_styles($custom) {
         } else {
             $margin = '';
         }
-        $custom .= $key . "," . $key . "{" . $size . $margin . "}"."\n";
+        if($size || $margin) {
+            $custom .= $key . ", ." . $key . "{" . $size . $margin . "}"."\n";
+        }
     }
     $custom .= "}";
     //Output all the styles
