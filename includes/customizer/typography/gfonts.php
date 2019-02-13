@@ -5,13 +5,16 @@
 function getGoogleFonts() {
     $googleListFonts = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDglsQUsvAE9R6u9tvmQzeYt2hKdNN7FN4');
     $googleListFonts = json_decode($googleListFonts);
-    
     $font_choices = array();
-    foreach($googleListFonts->items as $googleListFont) {
-        $googleFamily = $googleListFont->family;
-        $variants = implode(',', $googleListFont->variants);
-        $googleFontArg = $googleFamily . ':' . $variants;
-        $font_choices[$googleFontArg] .= $googleFamily;
+    foreach($googleListFonts->items as $key => $value) {
+        
+        $googleFamily = $value->family;
+        $googleVariants = $value->variants;
+        $variants = implode(',', $googleVariants);
+        $googleFontArgs = $googleFamily . ':' . $variants;
+
+        $font_choices[$googleFontArgs] = $googleFamily;
+        unset($font_choices[$key]);
     }
     return $font_choices;
 }
