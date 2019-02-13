@@ -181,7 +181,7 @@
                     // Font Color
                     // ==================================================
                     $wp_manager->add_setting( 'im_fonts_' . $key . '_color', array(
-                        'default' => '#000000'
+                        'default' => ''
                     ) );
 
 
