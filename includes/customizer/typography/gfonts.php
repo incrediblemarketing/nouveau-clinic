@@ -202,6 +202,45 @@ function im_fonts_custom_styles($custom) {
     }
     $custom .= "}";
     //Output all the styles
+    $fonts = array(
+        'h1' => '',
+        'h2' => '',
+        'h3' => '',
+        'h4' => '',
+        'h5' => '',
+        'h6' => '',
+        'body' => ''
+    );
+    $font_args = array();
+    $i = 0;
+    foreach($fonts as $key => $value) {
+        $font_family = 'im_fonts_' . $key . '_family';
+        $font_family = esc_html(get_theme_mod($font_family));
+        if(!empty($font_family)) {
+            
+            $font_weight = 'im_fonts_' . $key . '_weight';
+            
+            $font_weight = esc_html(get_theme_mod($font_weight));
+            $font_pieces = explode(':', $font_family);
+            $font_weights = explode(',', $font_pieces[1]);
+            $font_family = $font_pieces[0] . ':';
+            $font_args[$font_family][$font_weights[$font_weight]] = $font_weights[$font_weight];
+            unset($font_args[$i]);
+            $i++;
+        }
+    }
+    $fonts = array();
+    $fontweights = array();
+    foreach($font_args as $key => $value) {
+        
+        $value = implode(',', $value);
+        
+        $arg = $key . $value;
+        array_push($fonts, $arg);
+    }
+
+    
+
     wp_add_inline_style( 'style', $custom );
 }
 add_action( 'wp_enqueue_scripts', 'im_fonts_custom_styles' );
