@@ -14,6 +14,7 @@ add_action('wp_enqueue_scripts', 'im_register_styles');
 function im_enqueue_styles() {
     wp_enqueue_style('googlefonts');
     wp_enqueue_style('fontawesome');
+    wp_enqueue_style('swiper');
     wp_enqueue_style('main');
     wp_enqueue_style('style');
 }

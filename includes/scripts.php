@@ -47,6 +47,7 @@ add_action('wp_enqueue_scripts', 'im_register_scripts');
 function im_enqueue_scripts() {  
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('bootstrap');
+    wp_enqueue_script('swiper');
 	wp_enqueue_script('tweenmax');
 	wp_enqueue_script('scrollmagic');
 	wp_enqueue_script('scrollanimation');
