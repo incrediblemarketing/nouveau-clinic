@@ -48,8 +48,8 @@
     overflow-wrap: break-word;
 
     -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-            hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 ///
@@ -69,9 +69,9 @@
     word-break: break-word;
 
     -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 // Baseline, measured in pixels
@@ -92,13 +92,13 @@
 $baseline-px: 16 !default;
 
 // Get the rem equivalent of a value
-@function rem-value( $value ) {
+@function rem-value($value) {
 
     // If value is a number, do some magic rem stuff
-    @if type-of( $value ) == "number" and unit( $value ) == "px" {
+    @if type-of($value)=="number"and unit($value)=="px" {
 
         // Slightly hacky way of removing unit
-        $unitless-value: $value / ( $value * 0 + 1 );
+        $unitless-value: $value / ($value * 0 + 1);
 
         // Return rem value
         @return #{$unitless-value / $baseline-px}rem;
@@ -109,17 +109,16 @@ $baseline-px: 16 !default;
 }
 
 // Rem mixin
-@mixin rem( $property, $values ) {
+@mixin rem($property, $values) {
 
     // Loop over pixel values to get rem values
     $rem-values: unquote("");
 
     @each $value in $values {
-        $rem-values: append( $rem-values, rem-value( $value ) );
+        $rem-values: append($rem-values, rem-value($value));
     }
 
     // Set the pixel/rem values
     #{$property}: $values;
     #{$property}: $rem-values;
 }
-

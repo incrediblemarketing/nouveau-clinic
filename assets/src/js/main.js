@@ -1,128 +1,128 @@
-;(function ($, window, document, undefined) {
-	'use strict';
+(function($, window, document, undefined) {
+    'use strict';
 
-	$(document).ready( function() {
+    $(document).ready(function() {
 
-		var EV = {
-			init : function() {
-				this.utils.init();
-			},
-			vals : {
-				$window : $(window), // http://jsperf.com/jquery-window-cache
-				$siteNavSticky : $('.site-nav-sticky').eq(0)
-			},
-			utils : {
+        var EV = {
+            init: function() {
+                this.utils.init();
+            },
+            vals: {
+                $window: $(window), // http://jsperf.com/jquery-window-cache
+                $siteNavSticky: $('.site-nav-sticky').eq(0)
+            },
+            utils: {
 
-				init : function() {
+                init: function() {
 
-					this.mqState.appendEl();
-					this.mqState.checkStateView();
-					this.setDelay();
-					this.scrollIt();
-					this.dataCss();
-					this.stickySiteNav();
+                    this.mqState.appendEl();
+                    this.mqState.checkStateView();
+                    this.setDelay();
+                    this.scrollIt();
+                    this.dataCss();
+                    this.stickySiteNav();
                     this.scrollMagic();
 
-				},
-				mqState : {
+                },
+                mqState: {
 
-					appendEl : function() {
+                    appendEl: function() {
 
-						$('body').append('<div class="mq-state"/>');
+                        $('body').append('<div class="mq-state"/>');
 
-					},
-					checkStateView : function() {
+                    },
+                    checkStateView: function() {
 
-						EV.vals.view  = parseInt( $('.mq-state').css('z-index') );
+                        EV.vals.view = parseInt($('.mq-state').css('z-index'));
 
-						// fallback to desktop if browser doesn't support media queries
-						if ( ! Modernizr.mq( 'only all' ) ) EV.vals.view = 30;
+                        // fallback to desktop if browser doesn't support media queries
+                        if (!Modernizr.mq('only all')) EV.vals.view = 30;
 
-					},
+                    },
 
-				},
+                },
 
-				setDelay : function() {
+                setDelay: function() {
 
-					var scrolled = false,
-						resized  = false;
+                    var scrolled = false,
+                        resized = false;
 
-					// delay checking of scroll
-					EV.vals.$window.on( 'scroll touchmove', function() { scrolled = true; });
-					// delay checking of window resize
-					EV.vals.$window.on( 'resize', function() { resized = true; });
+                    // delay checking of scroll
+                    EV.vals.$window.on('scroll touchmove', function() { scrolled = true; });
+                    // delay checking of window resize
+                    EV.vals.$window.on('resize', function() { resized = true; });
 
-					setInterval( function() {
+                    setInterval(function() {
 
-						if ( scrolled ) {
+                        if (scrolled) {
 
-							scrolled = false;
+                            scrolled = false;
 
-						}
+                        }
 
-						if ( resized ) {
+                        if (resized) {
 
-							resized = false;
+                            resized = false;
 
-							EV.utils.mqState.checkStateView();
-						}
+                            EV.utils.mqState.checkStateView();
+                        }
 
-					}, 50);
-				},
+                    }, 50);
+                },
 
-				scrollIt : function() {
+                scrollIt: function() {
 
-					// Animate the scroll to top
-					$('.js-to-top').on( 'click', function( e ) {
+                    // Animate the scroll to top
+                    $('.js-to-top').on('click', function(e) {
 
-						e.preventDefault();
+                        e.preventDefault();
 
-						$('html, body').animate( { scrollTop: 0 }, 300 );
+                        $('html, body').animate({ scrollTop: 0 }, 300);
 
-					});
+                    });
 
-					// Animate scroll to id
-					$('.js-scroll-to').on( 'click', function( e ) {
+                    // Animate scroll to id
+                    $('.js-scroll-to').on('click', function(e) {
 
-						e.preventDefault();
+                        e.preventDefault();
 
-						var href        = $(this).attr('href'),
-							scrollPoint = $(href).offset();
+                        var href = $(this).attr('href'),
+                            scrollPoint = $(href).offset();
 
-						$('html, body').animate( { scrollTop: scrollPoint.top }, 300 );
-					});
-				},
+                        $('html, body').animate({ scrollTop: scrollPoint.top }, 300);
+                    });
+                },
 
-				dataCss : function() {
+                dataCss: function() {
 
-					// background images
-					$('[data-bg-image]').each(function(){
-						var $this = $(this);
-						$this.css({'background-image' : 'url("' + $this.data('bgImage') + '")'});
-					});
+                    // background images
+                    $('[data-bg-image]').each(function() {
+                        var $this = $(this);
+                        $this.css({ 'background-image': 'url("' + $this.data('bgImage') + '")' });
+                    });
 
-					// background colors
-					$('[data-bg-color]').each(function(){
-						var $this = $(this);
-						$this.css({'background-color' : $this.data('bgColor') });
-					});
+                    // background colors
+                    $('[data-bg-color]').each(function() {
+                        var $this = $(this);
+                        $this.css({ 'background-color': $this.data('bgColor') });
+                    });
 
-				},
+                },
 
-				stickySiteNav : function() {
+                stickySiteNav: function() {
 
-					var stickyTop = EV.vals.$siteNavSticky.height() + 200;
+                    var stickyTop = EV.vals.$siteNavSticky.height() + 200;
 
-					EV.vals.$window.scroll(function() {
-						
-						if ( EV.vals.$window.scrollTop() >= stickyTop) {
-							EV.vals.$siteNavSticky.addClass('visible');
-						} else {
-							EV.vals.$siteNavSticky.removeClass('visible');
-						}
-					});
+                    EV.vals.$window.scroll(function() {
 
-				},
+                        if (EV.vals.$window.scrollTop() >= stickyTop) {
+                            EV.vals.$siteNavSticky.addClass('visible');
+                        } else {
+                            EV.vals.$siteNavSticky.removeClass('visible');
+                        }
+                    });
+
+                },
                 scrollMagic: function() {
                     var blocks = $('.site-wrap').children('.block'),
                         ctrl = new ScrollMagic.Controller();
@@ -166,11 +166,11 @@
                     });
                 }
 
-			},
-		};
+            },
+        };
 
-		EV.init();
+        EV.init();
 
-	});
+    });
 
 })(jQuery, window, document);
