@@ -1,6 +1,36 @@
 <?php
 
 function im_register_scripts() {
+
+    // Comment in/out the gsap plugins you wish to use.
+    $gsap_plugins = array(
+        // 'all.js',
+        // 'AttrPlugin.js',
+        // 'BezierPlugin.js',
+        // 'ColorPropsPlugin.js',
+        // 'CSSPlugin.js',
+        // 'CSSRulePlugin.js',
+        // 'DirectionalRotationPlugin.js',
+        // 'Draggable.js',
+        // 'EaselPlugin.js',
+        // 'EasePack.js',
+        // 'EndArrayPlugin.js',
+        // 'ModifiersPlugin.js',
+        // 'PixiPlugin.js',
+        // 'RoundPropsPlugin.js',
+        // 'ScrollToPlugin.js',
+        // 'TextPlugin.js',
+        // 'TimelineLite.js',
+        'TimelineMax.js',
+        // 'TweenLite.js',
+        'TweenMax.js'
+        // 'TweenMaxBase.js'
+    );
+    
+    foreach($gsap_plugins as $gsap_plugin) {
+        wp_enqueue_script('gsap-' . str_replace('.js', '', $gsap_plugin) , get_template_directory_uri() . '/assets/dist/plugins/gsap/' . $gsap_plugin, array('main'), false );
+    }
+    
 	wp_register_script('bootstrap', get_template_directory_uri() . '/assets/dist/plugins/bootstrap/js/bootstrap.bundle.min.js');
 	wp_register_script('swiper', get_template_directory_uri() . '/assets/dist/plugins/swiper/js/swiper.min.js','','',true);
 	wp_register_script('tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js','','',true);

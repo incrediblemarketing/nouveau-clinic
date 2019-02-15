@@ -200,7 +200,9 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('./assets/dist/plugins/bootstrap'));
   var scrollmagic = gulp.src('./node_modules/scrollmagic/scrollmagic/minified/**/*')
     .pipe(gulp.dest('./assets/dist/plugins/scrollmagic'));
-  return merge(modernizr, fontawesome, swiper, bootstrap, scrollmagic);
+  var gsap = gulp.src('./node_modules/gsap/**/*')
+    .pipe(gulp.dest('./assets/dist/plugins/gsap'));
+  return merge(modernizr, fontawesome, swiper, bootstrap, scrollmagic, gsap);
 });
 
 /**
