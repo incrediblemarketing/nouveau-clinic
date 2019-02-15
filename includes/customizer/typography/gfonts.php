@@ -3,7 +3,7 @@
  * Props to the BLDR Theme: https://wordpress.org/themes/bldr/
  * */
 function getGoogleFonts() {
-    $googleListFonts = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDglsQUsvAE9R6u9tvmQzeYt2hKdNN7FN4');
+    $googleListFonts = file_get_contents('https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=AIzaSyDglsQUsvAE9R6u9tvmQzeYt2hKdNN7FN4');
     $googleListFonts = json_decode($googleListFonts);
     $font_choices = array();
     foreach($googleListFonts->items as $key => $value) {
@@ -16,6 +16,7 @@ function getGoogleFonts() {
         $font_choices[$googleFontArgs] = $googleFamily;
         unset($font_choices[$key]);
     }
+    array_unshift($font_choices, '- select a font -');
     return $font_choices;
 }
 function remove_empty($array) {
@@ -34,6 +35,8 @@ function im_fonts_custom_styles($custom) {
     $headings_font_h4 = esc_html(get_theme_mod('im_fonts_h4_family'));
     $headings_font_h5 = esc_html(get_theme_mod('im_fonts_h5_family'));
     $headings_font_h6 = esc_html(get_theme_mod('im_fonts_h6_family'));
+    $headings_font_p = esc_html(get_theme_mod('im_fonts_p_family'));
+    $headings_font_a = esc_html(get_theme_mod('im_fonts_a_family'));
 
 
 
@@ -59,11 +62,11 @@ function im_fonts_custom_styles($custom) {
     // if ( $headings_font ) {
         foreach($headings_font as $key => $value) {
             // $custom .= $font_heading
-            if($value != '') {
-                $font_pieces = explode(':', $value);
-                $font_family = "font-family: {$font_pieces[0]};";
-            } else {
+            if($value == '' || $value == '0' || $value == '1') {
                 $font_family = '';
+            } else {
+                $font_pieces = explode(':', $value);
+                $font_family = "font-family: {$font_pieces[0]};";                    
             }
             $font_pieces = explode(':', $value);
             $font_weight = 'im_fonts_' . $key . '_weight';
@@ -110,26 +113,26 @@ function im_fonts_custom_styles($custom) {
                 $font_letterspacing = '';
             }
             if($font_weight != '') {
-                $font_weight = explode(',', $font_pieces[1])[$font_weight];
-                $font_style  = $font_weight;
-                if(!preg_match('/^\d+$/', $font_style)){
-                    $font_style = preg_replace('/[0-9]+/', '', $font_style);
-                    if($font_style == 'regular') {
-                        $font_style = 'normal';
+                if($font_pieces[0] != 0) {
+                    $font_weight = explode(',', $font_pieces[1])[$font_weight];
+                    $font_style  = $font_weight;
+                    if(!preg_match('/^\d+$/', $font_style)){
+                        $font_style = preg_replace('/[0-9]+/', '', $font_style);
+                        if($font_style == 'regular') {
+                            $font_style = 'normal';
+                        }
+                        $font_style = 'font-style:' . $font_style .';';
+                    } else {
+                        $font_style = '';
                     }
-                    $font_style = 'font-style:' . $font_style .';';
-                } else {
-                    $font_style = '';
-                }
 
-                $font_weight = preg_replace("/[^0-9]/", "", $font_weight);
-                if($font_weight != '') {
-                    $font_weight = 'font-weight:' . $font_weight . ';';
-                } else {
-                    $font_weight = '';
+                    $font_weight = preg_replace("/[^0-9]/", "", $font_weight);
+                    if($font_weight != '') {
+                        $font_weight = 'font-weight:' . $font_weight . ';';
+                    } else {
+                        $font_weight = '';
+                    }
                 }
-                
-
 
             } else {
                 $font_weight = '';
@@ -137,9 +140,7 @@ function im_fonts_custom_styles($custom) {
 
 
             $custom .= $key . ", ." . $key . "{" . $font_family . $font_weight . $font_style . "color: " . $font_color . ";" . $size . $margin . $font_transform . $font_letterspacing . $font_lineheight ."}"."\n";
-        // }
-        // $font_pieces = explode(":", $headings_font);
-        // $custom .= "h1, h2, h3, h4, h5, h6 { font-family: {$font_pieces[0]}; }"."\n";
+
     }
     $body_font = esc_html(get_theme_mod('im_fonts_body_family'));
     $im_fonts_body_color = esc_html(get_theme_mod('im_fonts_body_color'));
