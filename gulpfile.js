@@ -77,12 +77,12 @@ var project         = 'gulptest', // Project name, used for build zip.
 */
 gulp.task('styles', function () {
     gulp.src('./assets/src/sass/main.scss')
+        .pipe(plumber())
         .pipe(sass({
             includePaths: [
                 './node_modules/bootstrap/scss/',
             ],
         }))
-        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
             errLogToConsole: true,
