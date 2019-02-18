@@ -192,8 +192,12 @@ gulp.task('images', function() {
 gulp.task('copy', function() {
     var modernizr = gulp.src('./assets/src/js/plugins/modernizr-3.0.0.min.js')
         .pipe(gulp.dest('./assets/dist/plugins'));
-    var fontawesome = gulp.src('./node_modules/@fortawesome/fontawesome-pro/**/*')
-        .pipe(gulp.dest('./assets/dist/plugins/fontawesome-pro'));
+    var fontawesomecss = gulp.src('./node_modules/@fortawesome/fontawesome-pro/css/**/*' )
+        .pipe(gulp.dest('./assets/dist/plugins/fontawesome-pro/css'));
+    var fontawesomejs = gulp.src('./node_modules/@fortawesome/fontawesome-pro/js/**/*' )
+        .pipe(gulp.dest('./assets/dist/plugins/fontawesome-pro/js'));
+    var fontawesomewebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-pro/webfonts/**/*' )
+        .pipe(gulp.dest('./assets/dist/plugins/fontawesome-pro/webfonts'));
     var swiper = gulp.src('./node_modules/swiper/dist/**/*')
         .pipe(gulp.dest('./assets/dist/plugins/swiper'));
     var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
@@ -202,7 +206,7 @@ gulp.task('copy', function() {
         .pipe(gulp.dest('./assets/dist/plugins/scrollmagic'));
     var gsap = gulp.src('./node_modules/gsap/**/*')
         .pipe(gulp.dest('./assets/dist/plugins/gsap'));
-    return merge(modernizr, fontawesome, swiper, bootstrap, scrollmagic, gsap);
+    return merge(modernizr, fontawesomecss, fontawesomejs, fontawesomewebfonts, swiper, bootstrap, scrollmagic, gsap);
 });
 
 /**
