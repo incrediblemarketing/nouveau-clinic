@@ -11,10 +11,8 @@
 				$overlayhero = get_sub_field('slight_overlay');
 			?>
 				<section class="row">
-					<div class="col-12<?php if(!$overlayhero) { echo ' no-overlay'; } ?><?php if($type == 'Video'){ echo ' video-overlay'; } ?><?php if($type == 'Slider'){ echo ' hero-slider'; } ?>" id="hero">
-						<?php if($type == 'Image'){ ?>
-							<img src="<?php echo get_sub_field('slider_bg'); ?>" />
-						<?php }elseif($type == 'Video'){ ?>
+					<div class="col-12<?php if(!$overlayhero) { echo ' no-overlay'; } ?><?php if($type == 'Video'){ echo ' video-overlay'; } ?><?php if($type == 'Slider'){ echo ' hero-slider'; } ?>" id="hero" data-bg="<?php echo get_sub_field('slider_bg'); ?>">
+						<?php if($type == 'Video'){ ?>
 							<video poster="<?php echo get_sub_field('slider_bg'); ?>" id="bgvid" playsinline autoplay muted loop controls>
 								<source src="<?php echo get_sub_field('webm_file')['url']; ?>" type="video/webm">
 								<source src="<?php echo get_sub_field('mp4_file')['url']; ?>" type="video/mp4">

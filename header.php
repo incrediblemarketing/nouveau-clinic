@@ -30,10 +30,7 @@
         </svg>
     </div>
     <?php
-    $hl = get_field('header_layout');
-    if (!$hl) {
-        $hl = get_field('header_layout', 'options');
-    }
+    $hl = get_field('header_layout', 'options');
     $hsi = get_field('header_social_icons', 'options');
     $sticky = get_field('sticky_header', 'options');
     $hideHeader = get_field('hide_page_header');
@@ -103,7 +100,7 @@
     <main role="main" class="container-fluid">
         <?php
         if (!is_front_page() && $hideHeader == 0) {
-            $headerImage = get_field('background_image');
+            $headerImage = get_field('header_image');
             if (!$headerImage) {
                 $headerImage = get_field('default_header_image', 'options');
             } ?>

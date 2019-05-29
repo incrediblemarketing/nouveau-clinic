@@ -1,12 +1,7 @@
 </main><!-- end container-fluid -->
 <?php 
 
-	$fl = get_field('footer_layout');
-
-	if(!$fl){
-		$fl = get_field('footer_layout' , 'option');
-	}
-
+	$fl = get_field('footer_layout' , 'option');
 	$fsi = get_field('footer_social_icons' , 'option');
 	$fh = get_field('footer_header', 'option');
 	$mapImg = get_field('map_image', 'option');

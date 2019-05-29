@@ -1,70 +1,11 @@
 {
     "key": "group_5a21c17dc2cc9",
     "title": "Page Options",
-    "fields": [{
-            "key": "field_5a21c19a18ef7",
-            "label": "Header",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5c3669392cfb6",
-            "label": "Hide Page Header",
-            "name": "hide_page_header",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5a21c1ba18ef9",
-            "label": "Header Layout",
-            "name": "header_layout",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "h1": "Header 1",
-                "h2": "Header 2",
-                "h3": "Header 3"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
+    "fields": [
         {
             "key": "field_5a21c2cd946c1",
-            "label": "Background Image",
-            "name": "background_image",
+            "label": "Header Image",
+            "name": "header_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -84,71 +25,31 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_5a21c1a618ef8",
-            "label": "Footer",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5a21c1e218efa",
-            "label": "Footer Layout",
-            "name": "footer_layout",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "f1": "Footer 1",
-                "f2": "Footer 2",
-                "f3": "Footer 3",
-                "f4": "Boxed Footer",
-                "f5": "Slant Footer",
-                "f6": "Footer 6",
-                "custom": "Custom Footer"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
         }
     ],
     "location": [
-        [{
-            "param": "post_type",
-            "operator": "==",
-            "value": "page"
-        }],
-        [{
-            "param": "post_type",
-            "operator": "!=",
-            "value": "post"
-        }]
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "post"
+            }
+        ]
     ],
     "menu_order": 0,
-    "position": "acf_after_title",
+    "position": "side",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": ""
+    "description": "",
+    "modified": 1559167314
 }
