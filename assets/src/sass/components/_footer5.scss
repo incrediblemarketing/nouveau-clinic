@@ -1,0 +1,41 @@
+#footer.f5 i {
+    font-size: 27px;
+    margin-right: 15px;
+}
+
+#footer.f5 .slant-footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 112%;
+    width: 23vh;
+}
+
+#footer.f5 .info {
+    padding: 5vh 5vw;
+}
+
+#footer.f5 .copyright {
+    text-align: left;
+    padding: 0;
+}
+
+#footer.f5 .copyright p {
+    margin: 20px 0;
+}
+
+#footer.f5 ::-webkit-input-placeholder {
+    color: #ddd;
+}
+
+#footer.f5 ::-moz-placeholder {
+    color: #ddd;
+}
+
+#footer.f5 :-ms-input-placeholder {
+    color: #ddd;
+}
+
+#footer.f5 :-moz-placeholder {
+    color: #ddd;
+}

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : ?>
-	<?php while (have_posts()) : the_post(); ?>
-		<?php get_template_part('components/blocks'); ?>
-	<?php endwhile; ?> 
-<?php endif; ?>  
+<?php if (have_posts()) :
+    while (have_posts()) : the_post();
+        get_template_part('components/content-page');
+    endwhile;
+endif; ?>
 
 <?php get_footer(); ?>

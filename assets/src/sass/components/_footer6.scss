@@ -1,0 +1,37 @@
+#footer.f6 h4 {
+    color: #fff;
+    font-family: Avenir;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.1em;
+    text-transform: uppercase;
+}
+
+#footer.f6 #map {
+    height: 416px !important;
+}
+
+#footer.f6 a.directions {
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+}
+
+#footer.f6>.row {
+    padding-bottom: 0;
+}
+
+#footer.f6 ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+#footer.f6 ::-moz-placeholder {
+    color: #fff;
+}
+
+#footer.f6 :-ms-input-placeholder {
+    color: #fff;
+}
+
+#footer.f6 :-moz-placeholder {
+    color: #fff;
+}

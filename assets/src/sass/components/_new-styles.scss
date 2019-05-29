@@ -1,0 +1,798 @@
+/*
+
+I typically add input[type=submit]  to .btn, .btn-primary and have the same hover effect as .btn-primary:hover
+
+*/
+
+/* Hero Slider */
+#hero.hero-slider {
+    height: 100vh;
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+}
+
+#hero.hero-slider .swiper-slide {
+    width: 100%;
+    height: 100vh;
+    min-width: 100%;
+    display: block;
+}
+
+#hero.hero-slider .swiper-slide.overlay::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#hero.hero-slider .inner-flex {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Gallery CSS */
+.gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Gallery Archive Template 1 */
+.child-page {
+    margin: 1%;
+    width: 23%;
+    display: block;
+    height: 50vh;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    border: 5px solid #a71478;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.child-page::before {
+    content: '';
+    display: block;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.child-page a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 9;
+}
+
+.child-page a h4 {
+    color: #ffffff;
+}
+
+.child-page:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+/* Gallery Single Template 1 */
+.gallery.g1 .single-gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery.g1 .single-gallery .item {
+    display: flex;
+    text-align: center;
+}
+
+/* Gallery Single Template 2 */
+.gallery.g2 .gallery-carousel {
+    border: 5px solid #a71478;
+    border-radius: 10px;
+}
+
+.gallery.g2 .gallery-carousel .item {
+    display: flex;
+}
+
+.gallery.g2 .gallery-carousel .btn-secondary {
+    display: flex;
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.gallery.g2 .gallery-content h3 {
+    padding-bottom: 10px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid;
+}
+
+.gallery.g2 .gallery-carousel .swiper-slide {
+    padding: 35px 50px;
+}
+
+/* Gallery Archive Template 2 */
+.gallery-archive.a2 {
+    background: #000;
+}
+
+.gallery-archive.a2 .inner-container {
+    border: 1px solid #666;
+    padding: 15px 30px;
+}
+
+.gallery-archive.a2 h4.fancy {
+    color: #fff;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+}
+
+.gallery-archive.a2 h4.fancy:after {
+    background-color: #a71478;
+    content: '\a0';
+    flex-grow: 1;
+    height: 1px;
+    position: relative;
+    top: 0.5em;
+}
+
+.gallery-archive.a2 h4.fancy span {
+    padding-right: 15px;
+}
+
+.gallery-archive.a2 .item {
+    position: relative;
+    height: 100%;
+    background: #000;
+    width: 100% !important;
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+.gallery-archive.a2 .item img {
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: -1;
+    transform: scale(1);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+}
+
+.gallery-archive.a2 .item h3 {
+    position: absolute;
+    top: 30%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    z-index: 3;
+    color: #fff;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -webkit-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.gallery-archive.a2 .item .child-pages {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    z-index: 3;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+    -webkit-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+
+.gallery-archive.a2 .item .child-pages a {
+    display: block;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.gallery-archive.a2 .item::after {
+    content: '';
+    height: 110%;
+    width: 110%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+}
+
+.gallery-archive.a2 .item:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.gallery-archive.a2 .item:hover h3 {
+    color: #a71478;
+}
+
+.gallery-archive.a2 .item:hover::after {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.gallery-archive.a2 .item .child-pages a:hover {
+    color: #a71478;
+}
+
+.gallery-carousel-archive .swiper-button-next,
+.gallery-carousel-archive .swiper-button-prev {
+    color: #fff;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    transform: translateY(-50%);
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+}
+
+.gallery-carousel-archive .swiper-button-next {
+    right: -55px;
+}
+
+.gallery-carousel-archive .swiper-button-prev {
+    left: -55px;
+}
+
+/* Gallery Single Template 3 */
+.gallery.g3 {
+    background: #000;
+}
+
+.gallery.g3 .inner-container {
+    border: 1px solid #666;
+    padding: 15px 30px;
+}
+
+.gallery.g3 h4.fancy {
+    color: #fff;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+}
+
+.gallery.g3 h4.fancy:after {
+    background-color: #a71478;
+    content: '\a0';
+    flex-grow: 1;
+    height: 1px;
+    position: relative;
+    top: 0.5em;
+}
+
+.gallery.g3 h4.fancy span {
+    padding-right: 15px;
+}
+
+.gallery.g3 .swiper-slide {
+    display: flex;
+}
+
+.gallery.g3 .swiper-slide>div {
+    width: 50%;
+    color: #fff;
+}
+
+.gallery.g3 .desc {
+    padding: 0 50px;
+}
+
+.gallery.g3 .breadcrumb {
+    padding: 0;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.gallery.g3 .breadcrumb a {
+    color: #a71478;
+    margin-right: 5px;
+}
+
+.gallery.g3 .swiper-slide>.desc>hr:first-of-type {
+    margin-bottom: 8px;
+}
+
+.gallery.g3 hr {
+    background: #fff;
+    color: #fff;
+    height: 1px;
+}
+
+.gallery.g3 .gallery-carousel {
+    padding-top: 70px;
+}
+
+.gallery.g3 .swiper-slide>div img {
+    width: 50%;
+    padding: 5px;
+}
+
+.gallery.g3 .swiper-slide>div:first-child {
+    display: inline;
+}
+
+.gallery.g3 .procedure-links a {
+    display: block;
+}
+
+.gallery.g3 .swiper-button-prev,
+.gallery.g3 .swiper-button-next {
+    position: absolute;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    display: inline-block;
+    font-size: 1.125em;
+    padding: 10px 35px;
+    border-radius: 0;
+    text-decoration: none !important;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    top: 22px;
+    left: 0;
+    width: auto;
+    height: auto;
+}
+
+.gallery.g3 .swiper-button-next {
+    right: 0;
+    left: auto;
+}
+
+/* Form CSS */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+/* Gravity Forms CSS Edits */
+body footer .gform_wrapper .top_label div.ginput_container {
+    margin: 0;
+}
+
+footer .gform_wrapper .top_label .gfield_label,
+#sidebar .gform_wrapper .top_label .gfield_label {
+    margin: 0;
+}
+
+footer .gform_wrapper ul.gform_fields li.gfield,
+#sidebar .gform_wrapper ul.gform_fields li.gfield {
+    padding: 0;
+    margin: auto;
+}
+
+footer .gform_wrapper .gform_footer {
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+
+footer .gform_wrapper .top_label .gfield_label,
+#sidebar .gform_wrapper .top_label .gfield_label {
+    display: none;
+}
+
+/* Error Fields */
+footer .gform_wrapper div.validation_error {
+    color: #fff;
+    background: #790000;
+    border-color: #790000;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+footer .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+    margin: 0;
+}
+
+footer .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+body footer .gform_wrapper li.gfield_error textarea.textarea {
+    border: 1px solid #790000;
+    padding: 10px !important;
+    margin: 0;
+}
+
+footer .gform_wrapper .field_description_below .gfield_description {
+    padding: 0 !important;
+    margin-bottom: 15px;
+    color: #790000;
+}
+
+footer .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+    max-width: 100% !important;
+    border: 0;
+    background: transparent;
+    margin: 0;
+}
+
+/* Footer f1 */
+footer.f1 .gform_wrapper form {
+    background: #f0ede8;
+    padding: 35px;
+    border: #333 2px solid;
+}
+
+footer.f1 .gform_wrapper ul.gform_fields li.gfield {
+    clear: none !important;
+    float: left;
+    width: 100%;
+}
+
+footer.f1 .gfield:nth-child(1) input,
+footer.f1 .gfield:nth-child(3) input {
+    width: calc(100% - 15px);
+}
+
+footer.f1 .gfield input,
+footer.f1 .gfield textarea {
+    background: rgba(255, 255, 255, .45);
+    border: 1px solid rgba(153, 153, 153, 0.5);
+    box-shadow: rgb(153, 153, 153) 1px 1px 1px;
+    color: #333;
+    padding: 12px !important;
+    margin-bottom: 1.25rem;
+}
+
+footer.f1 input[type=submit] {
+    margin: 0 auto !important;
+    display: flex !important;
+}
+
+/* Footer f2 */
+footer.f2 .gform_wrapper {
+    margin: 0;
+}
+
+footer.f2 .gfield input,
+footer.f2 .gfield textarea {
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, .8);
+    border: none;
+    padding: 8px 15px !important;
+    color: #000;
+}
+
+/* Footer f3 */
+footer.f3 .gfield input,
+footer.f3 .gfield textarea {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, .3);
+    border: none;
+    padding: 8px 15px !important;
+    color: #fff;
+}
+
+footer.f3 .gform_wrapper .gform_footer {
+    margin: 0;
+    text-align: right;
+}
+
+footer.f3 .gform_wrapper .gform_footer input[type=submit] {
+    margin: 0 !important
+}
+
+footer.f3 ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+footer.f3 ::-moz-placeholder {
+    color: #fff;
+}
+
+footer.f3 :-ms-input-placeholder {
+    color: #fff;
+}
+
+footer.f3 :-moz-placeholder {
+    color: #fff;
+}
+
+/* Footer f4 */
+footer.f4 .gform_wrapper .gfield input,
+footer.f4 .gform_wrapper .gfield textarea {
+    margin-bottom: 1.5rem;
+    padding: 8px 0 !important;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+footer.f4 input[type=submit] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 !important;
+}
+
+/* Footer f5 */
+footer.f5 .flex-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer.f5 .flex-info p {
+    display: flex;
+}
+
+footer.f5 .flex-info p svg {
+    margin: 5px 10px 10px 0;
+}
+
+footer.f5 .gform_wrapper .gfield input,
+footer.f5 .gform_wrapper .gfield textarea {
+    margin-bottom: 2rem;
+    padding: 8px 0 !important;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    background: transparent;
+    color: #fff;
+}
+
+footer.f5 input[type=submit] {
+    display: flex !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    width: 250px !important;
+    justify-content: center;
+}
+
+footer.f5 ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+footer.f5 ::-moz-placeholder {
+    color: #fff;
+}
+
+footer.f5 :-ms-input-placeholder {
+    color: #fff;
+}
+
+footer.f5 :-moz-placeholder {
+    color: #fff;
+}
+
+/* Footer f6 */
+footer.f6 .gform_wrapper ul.gform_fields li.gfield {
+    clear: none !important;
+    float: left;
+    width: 100%;
+}
+
+footer.f6 .gfield:nth-child(1) input,
+footer.f6 .gfield:nth-child(3) input {
+    width: calc(100% - 15px);
+}
+
+footer.f6 .gfield input,
+footer.f6 .gfield textarea {
+    background: rgba(255, 255, 255, .45);
+    border: 1px solid rgba(153, 153, 153, 0.5);
+    box-shadow: rgb(153, 153, 153) 1px 1px 1px;
+    color: #fff;
+    padding: 12px !important;
+    margin-bottom: 1.25rem;
+}
+
+footer.f6 .gform_wrapper .gform_footer {
+    margin: 0;
+    text-align: right;
+}
+
+footer.f6 .gform_wrapper .gform_footer input[type=submit] {
+    margin: 0 !important
+}
+
+/* Sidebar Form */
+#sidebar .sidebar-item:first-child {
+    background: #a71478;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#sidebar .sidebar-item:first-child h5 {
+    color: #fff;
+    margin: 0 0 15px;
+}
+
+#sidebar .gform_wrapper .gform_footer {
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+#sidebar input[type=submit] {
+    width: 100%;
+    margin: 0;
+}
+
+#sidebar .gform_wrapper {
+    margin: 0;
+}
+
+#sidebar input:not([type=submit]),
+#sidebar textarea {
+    background: rgba(255, 255, 255, .3);
+    border: none;
+    color: #fff;
+    padding: 8px !important;
+}
+
+#sidebar ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+#sidebar ::-moz-placeholder {
+    color: #fff;
+}
+
+#sidebar :-ms-input-placeholder {
+    color: #fff;
+}
+
+#sidebar :-moz-placeholder {
+    color: #fff;
+}
+
+/* Code Edits */
+#footer.f3 .squared {
+    padding: 7px;
+}
+
+/* Line 199 */
+
+@media screen and (max-width: 1200px) {
+
+    /* Gallery Archive Template 2 */
+    .gallery-archive.a2 .item {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    /* Gallery Archive Template 1 */
+    .child-page {
+        width: 31%;
+    }
+
+    /* Gallery Archive Template 2 */
+    .gallery-archive.a2 .gallery-carousel-archive {
+        height: 500px;
+    }
+
+    .gallery-carousel-archive:hover .swiper-button-next {
+        right: 20px;
+    }
+
+    .gallery-carousel-archive:hover .swiper-button-prev {
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    /* Gallery Archive Template 1 */
+    .child-page {
+        width: 48%
+    }
+
+    /* Gallery Single Template 3 */
+    .gallery.g3 .swiper-slide {
+        display: block;
+    }
+
+    .gallery.g3 .desc {
+        padding: 35px 0;
+    }
+
+    .gallery.g3 .swiper-slide>div {
+        width: 100%;
+    }
+
+    /* Footer f1 */
+    footer.f1 .gfield:nth-child(1) input,
+    footer.f1 .gfield:nth-child(3) input {
+        width: 100%;
+    }
+
+    /* Footer f6 */
+    footer.f6 .gfield:nth-child(1) input,
+    footer.f6 .gfield:nth-child(3) input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    /* Gallery Archive Template 1 */
+    .child-page {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+    /* Gallery Single Template 2 */
+    .gallery.g2 .gallery-carousel .btn-secondary {
+        margin: 15px 0;
+        max-width: 100%;
+    }
+
+    /* Gallery Single Template 3 */
+    .gallery.g3 .swiper-button-prev,
+    .gallery.g3 .swiper-button-next {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .gallery.g3 .inner-container {
+        padding: 15px;
+    }
+}

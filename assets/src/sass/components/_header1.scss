@@ -1,0 +1,23 @@
+.header1 {
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav.ubermenu .ubermenu-nav>li .ubermenu-submenu {
+        min-width: 230px;
+    }
+
+    .btn {
+        right: 25px;
+
+        svg,
+        i {
+            position: relative;
+            top: 2px;
+            left: -5px;
+        }
+    }
+}

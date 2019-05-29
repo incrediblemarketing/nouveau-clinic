@@ -1,27 +1,29 @@
 <?php get_header(); ?>
 
-<div class="row justify-content-center">
-	<div class="col-12 col-lg-7">
-		<?php if (have_posts()) : ?>
+<div class="row justify-content-center sh-row">
+    <div class="col-lg-7 col-12 sh-col">
+        <div class="pad-v-md">
+            <?php if (have_posts()) : ?>
 
-			<?php while (have_posts()) : the_post(); ?>
+                <?php while (have_posts()) : the_post(); ?>
 
-				<?php get_template_part('components/post-preview'); ?>
+                    <?php get_template_part('components/post-preview'); ?>
 
-			<?php endwhile; ?> 
+                <?php endwhile; ?>
 
-			<?php get_template_part('components/navigation-loop'); ?>
+                <?php get_template_part('components/navigation-loop'); ?>
 
-		<?php else : ?>
+            <?php else : ?>
 
-			<?php get_template_part('components/post-not-found'); ?>
+                <?php get_template_part('components/post-not-found'); ?>
 
-		<?php endif; ?>
+            <?php endif; ?>
 
-	</div>
-	<div class="col-lg-3">
-		<?php get_sidebar('blog'); ?>
-	</div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <?php get_sidebar('blog'); ?>
+    </div>
 </div>
 
 <?php get_footer(); ?>

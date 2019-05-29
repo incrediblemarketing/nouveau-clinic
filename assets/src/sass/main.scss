@@ -1,23 +1,29 @@
 // ==========================================================================
-// Colors
+// Base
 // ==========================================================================
 
-@import "core/colors";
+@import "base/typography",
+"core/colors",
+"base/helpers",
+"base/base",
+"base/buttons",
+"base/headings",
+"base/padding";
 
 // ==========================================================================
 // Bootstrap
 // ==========================================================================
 
 @import "vendor/bootstrap/bootstrap-variables",
-		"vendor/bootstrap/bootstrap";
+"vendor/bootstrap/bootstrap";
 
 // ==========================================================================
 // Settings
 // ==========================================================================
 
 @import "core/mq-breakpoints",
-		"core/functions",
-        "core/mixins";
+"core/functions",
+"core/mixins";
 
 // ==========================================================================
 // Dependencies
@@ -26,25 +32,39 @@
 @import "../../../node_modules/sass-mq/mq";
 
 // ==========================================================================
-// Base
-// ==========================================================================
-
-@import "base/helpers",
-		"base/base",
-		"base/typography";
-
-// ==========================================================================
 // Plugins
 // ==========================================================================
 
 @import "plugins/gravityforms",
-        "plugins/magnific-popup";
+"plugins/magnific-popup";
 
 // ==========================================================================
 // Components
 // ==========================================================================
 
 @import "components/blocks",
-        "components/social-icons",
-		"components/site-nav",
-        "components/footer";
+"components/social-icons",
+"components/site-nav",
+"components/header",
+"components/header1",
+"components/header2",
+"components/header3",
+"components/page-header",
+"components/hero",
+"components/procedure-cards",
+"components/procedure-hover",
+"components/procedures-accordian",
+"components/single-page",
+"components/related-posts",
+"components/sidebar",
+"components/testimonials",
+"components/taptap",
+"components/footer",
+"components/footer1",
+"components/footer2",
+"components/footer3",
+"components/footer4",
+"components/footer5",
+"components/footer6",
+"components/new-styles",
+"core/breakpoints";

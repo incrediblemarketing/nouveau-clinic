@@ -6,6 +6,19 @@ html {
     background: white;
 }
 
+body {
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    overflow-x: hidden;
+    color: $charcoal;
+    background-color: $off-white;
+    max-width: 100%;
+    font-kerning: none;
+    -webkit-font-smoothing: antialiased;
+}
+
 *:last-child {
     margin-bottom: 0;
 }
@@ -46,13 +59,112 @@ html {
  */
 
 ::-moz-selection {
-    background: $selection-highlight-background;
-    color: $selection-highlight-color;
+    background: $primary;
+    color: $white;
     text-shadow: none;
 }
 
 ::selection {
-    background: $selection-highlight-background;
-    color: $selection-highlight-color;
+    background: $primary;
+    color: $white;
     text-shadow: none;
+}
+
+
+
+#wrapper {
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+a,
+a:hover,
+a:focus,
+button:focus {
+    outline: 0 !important;
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.clearfix {
+    clear: both;
+}
+
+p {
+    margin-bottom: 25px;
+    z-index: 3;
+}
+
+.row {
+    position: relative;
+}
+
+.tbl {
+    display: table;
+}
+
+.tbl .inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.aligncenter {
+    margin: 0 auto 25px;
+    display: block;
+}
+
+.alignright {
+    margin: 0 0 30px 25px;
+    float: right;
+}
+
+.alignleft {
+    margin: 0 25px 30px 0;
+    float: left;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+hr {
+    background: $secondary;
+    color: $secondary;
+    height: .04em;
+    margin: 0 0 1em;
+}
+
+ul {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.wp-post-image,
+img.attachment-thumbnail,
+img.attachment-medium,
+img.attachment-large,
+img.attachment-full {
+    margin: 0 auto;
+}
+
+ul.owl-carousel {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.no-overflow {
+    overflow: hidden;
 }

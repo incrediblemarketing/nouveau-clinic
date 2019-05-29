@@ -1,0 +1,54 @@
+.btn,
+.read-more {
+    display: inline-block;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0.5em 2em !important;
+    text-decoration: none !important;
+    text-align: center;
+    z-index: 3;
+    position: relative;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    overflow: hidden;
+    white-space: normal;
+    border: 0 !important;
+
+    &:focus {
+        box-shadow: none !important;
+    }
+
+    svg,
+    i {
+        font-size: .85em;
+        margin-right: 5px;
+    }
+}
+
+body.btn-rounded {
+    .social-icons {
+        a {
+            border-radius: 50%;
+            border: 1px solid #fff;
+        }
+    }
+
+    .btn {
+        border-radius: 1em;
+    }
+}
+
+body.btn-rounded body.btn-boxed {
+    .btn {
+        border-radius: 0;
+    }
+
+    .social-icons {
+        a {
+            border-radius: 0;
+            border: none;
+        }
+    }
+}

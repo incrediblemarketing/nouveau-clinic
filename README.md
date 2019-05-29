@@ -1,5 +1,5 @@
-# designstudio
-WordPress theme for template builds.
+# incredibletheme
+WordPress theme for custom builds.
 
 ## Assets
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
@@ -49,6 +49,9 @@ The Gulp tools in this build allow you to use sass, imagemin, js min/concat and 
 2. cd to your project and run `npm install`.
 3. Go to line 13 in gulpfile.js and update to reflect your local setup.
 4. Run "gulp" from your project root.
+5. If this is your first time running gulp or you are getting the error "Command Not Found" when trying to run 'gulp', run this command:
+   'npm install --global gulp-cli'
+   This will install all the Gulp Command Line Tools needed to use Gulp. You will only have to do this once as it installs it globally to your machine.
 
 
 ## Plugin resources

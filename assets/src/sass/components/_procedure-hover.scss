@@ -1,0 +1,126 @@
+.procedures-half .info {
+    width: 420px;
+    padding: 0 5vw;
+    color: $white;
+    display: table;
+    height: 500px;
+}
+
+.procedures-half .info .inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.procedures-half .info h3 {
+    margin: 0;
+}
+
+.procedures-half .info h3.border {
+    color: $white;
+}
+
+.procedures-half .info h3.border:after {
+    background: $white;
+}
+
+.procedures-half .procedures-half-rotator {
+    width: calc(100% - 420px);
+    height: 100%;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide {
+    padding: 30px;
+    width: 320px;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    width: 100%;
+    height: auto;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide:hover h3 {
+    top: 15px;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide:hover .btn {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    top: auto;
+    bottom: 15px;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide:hover .small-desc {
+    opacity: 1;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide h3 {
+    position: absolute;
+    top: 48%;
+    margin: 0;
+    text-align: center;
+    display: block;
+    width: calc(100% - 60px);
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0;
+    color: $white;
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide .btn {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide .small-desc {
+    color: $white;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.5em;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.procedures-half .procedures-half-rotator .swiper-slide:hover:before {
+    background: rgba(0, 0, 0, 0.8);
+}

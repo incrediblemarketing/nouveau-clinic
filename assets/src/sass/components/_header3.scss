@@ -1,0 +1,33 @@
+.header3 .social-icons {
+    margin-right: 2em !important;
+}
+
+.header3 .social-icons li {
+    display: inline-block;
+}
+
+.header3 .menu-container {
+    width: auto;
+    display: table;
+    margin-left: auto;
+}
+
+.header3 nav.ubermenu {
+    border-top: 1px solid #fff;
+}
+
+.header3 nav.ubermenu .ubermenu-nav {
+    display: flex;
+}
+
+.header3 nav.ubermenu .ubermenu-nav>li {
+    flex-grow: 1;
+}
+
+.header3 nav.ubermenu .ubermenu-nav>li a:after {
+    display: none !important;
+}
+
+.header3 nav.ubermenu .ubermenu-nav>li .ubermenu-submenu {
+    min-width: 230px;
+}

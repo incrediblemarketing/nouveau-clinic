@@ -1,0 +1,35 @@
+#footer.f4 .inner-block,
+#footer.f4 .map-container {
+    height: 100%;
+}
+
+#footer.f4 .map-container {
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+#footer.f4 h3 {
+    font-size: 1.3333em;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+#footer.f4 h4 {
+    font-size: 1.3333em;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+#footer.f4 .inner-block {
+    padding: 4em;
+}
+
+#footer.f4 .inner-block p {
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+#footer.f4 .social-icons {
+    margin-top: 20px;
+}

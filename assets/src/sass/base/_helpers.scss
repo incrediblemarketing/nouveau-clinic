@@ -64,24 +64,6 @@
     order: 3;
 }
 
-@each $breakpoint,
-$size in $grid-breakpoints {
-    @media(min-width: #{$size}) {
-        .order-#{breakpoint}-1 {
-            order: 1 !important;
-        }
-
-        .order-#{breakpoint}-2 {
-            order: 2 !important;
-        }
-
-        .order-#{breakpoint}-3 {
-            order: 3 !important;
-        }
-    }
-}
-
-
 .bg-video {
     position: absolute;
     top: 0;
@@ -102,10 +84,168 @@ $size in $grid-breakpoints {
 }
 
 
+/* Images
+   ========================================================================== */
+.img.border-right,
+.img.border-left {
+    display: inline-block;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+    }
+
+    &::before {
+        left: 10px;
+        z-index: 3;
+        height: calc(100% - 10px);
+        width: calc(100% - 10px);
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+    }
+
+    &::after {
+        left: 10px;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        border: 2px solid $primary;
+    }
+}
+
+
+.img.alignleft {
+    margin: 0 3vw 20px 0;
+
+    img {
+        width: 20vw;
+    }
+
+}
+
+.img.alignright {
+    margin: 0 0 20px 3vw;
+
+    img {
+        width: 20vw;
+    }
+}
+
+
+.inner-block {
+    padding: 9.5vh 8.33333%;
+    position: relative;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+    background: #fff;
+}
+
+.slant-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: -1;
+    height: 100vw;
+}
+
+.slant-right svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.slant-right svg polygon {
+    fill: $primary;
+}
+
+.slant-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+    height: 100%;
+}
+
+.slant-left svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slant-left svg polygon {
+    fill: $primary;
+}
+
+.quotes {
+    position: relative;
+}
+
+.quotes:before {
+    content: "\f10d";
+    font-family: FontAwesome;
+    opacity: .1;
+    position: absolute;
+    top: 18px;
+    left: -50px;
+    font-size: 150px;
+    z-index: -1;
+}
+
+.quotes:after {
+    content: "\f10e";
+    font-family: FontAwesome;
+    opacity: .1;
+    position: absolute;
+    bottom: -18px;
+    right: -50px;
+    font-size: 150px;
+    z-index: -1;
+}
+
+.hasOverlay {
+    position: relative;
+}
+
+.hasOverlay * {
+    color: #fff;
+}
+
+.hasOverlay>* {
+    z-index: 1;
+    position: relative;
+}
+
+.primary-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0 !important;
+    opacity: 0.7;
+}
+
+.primary-top {
+    border-top: 10px solid $primary;
+}
+
 /* Visibility
    ========================================================================== */
 
 .visuallyhidden,
 .screen-reader-text {
     @extend %visuallyhidden;
+}
+
+.cta p {
+    margin: 0;
+}
+
+.cta a {
+    margin-left: 30px;
 }
