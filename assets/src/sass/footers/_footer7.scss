@@ -1,0 +1,196 @@
+#footer.f7 {
+    position: relative;
+    text-transform: initial;
+    font-family: $lato;
+    background-attachment: unset !important;
+
+    @include mq(md) {
+        background-attachment: fixed !important;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    h3 {
+        font-size: 1.9rem;
+        line-height: 1.3em;
+        text-align: left;
+        margin-bottom: 40px;
+        font-weight: 400;
+        letter-spacing: 3px;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+        margin-bottom: 4vh;
+        font-weight: 400;
+
+        @include mq(xxl) {
+            margin-bottom: 40px;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 15px;
+        line-height: 2em;
+    }
+
+    .gform_wrapper {
+        form {
+            input {
+                margin-bottom: 25px;
+                border: none;
+                border-bottom: 1px solid $black;
+                font-size: 14px;
+                color: $black;
+                padding: 8px 0;
+            }
+
+            .top_label #field_1_4 .gfield_label {
+                display: block;
+                font-weight: 400;
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+
+            textarea {
+                border: 1px solid $black;
+                color: $black;
+            }
+
+            input[type=submit] {
+                background: $black;
+                color: $white;
+                padding: 15px 35px;
+                height: 50px;
+                border: 1px solid $black;
+                text-transform: uppercase;
+                font-size: 12px;
+                display: block;
+                width: 235px;
+                margin: 0;
+
+                @include mq($until: lg) {
+                    width: 100%;
+                }
+            }
+
+            .gform_footer {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .footer--bottom {
+        display: block;
+        justify-content: space-between;
+        font-size: 14px;
+        color: $white;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, .3);
+        padding: 50px 0 0;
+        text-align: center;
+        margin: 0 -15px;
+
+        @include mq(md) {
+            display: flex;
+        }
+
+        .logo__footer {
+            display: none;
+
+            @include mq(md) {
+                display: block;
+            }
+        }
+
+        .social-icons {
+            margin: 35px auto 0;
+            justify-content: center;
+
+            @include mq(md) {
+                margin: unset;
+                justify-content: unset;
+            }
+        }
+
+        a {
+            color: $white;
+        }
+
+        .copyright {
+            padding: 0 10px;
+        }
+    }
+
+    .social-icons {
+        li {
+            border-radius: 100em;
+            border: 1px solid $white;
+
+            a {
+                height: 30px;
+                width: 30px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.grid__footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: $white;
+    margin-bottom: 85px;
+
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.block__location {
+    background: $primary;
+    color: $white;
+    padding: 5.1vh 4.1vw;
+
+    .btn-whiteborder {
+        margin-top: 5vh;
+        min-width: 50%;
+
+        @include mq(xxl) {
+            margin-top: 60px;
+        }
+    }
+
+    a {
+        color: $white;
+    }
+
+    &:nth-of-type(2) {
+        background: $dark-gray;
+    }
+}
+
+.block__contact {
+    grid-column: 1;
+    padding: 5vw;
+
+    @include mq(md) {
+        grid-column: span 2;
+    }
+
+    @include mq(lg) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        padding: 5vw 6vw;
+    }
+}

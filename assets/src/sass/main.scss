@@ -1,16 +1,4 @@
 // ==========================================================================
-// Base
-// ==========================================================================
-
-@import "base/typography",
-"core/colors",
-"base/helpers",
-"base/base",
-"base/buttons",
-"base/headings",
-"base/padding";
-
-// ==========================================================================
 // Bootstrap
 // ==========================================================================
 
@@ -18,7 +6,7 @@
 "vendor/bootstrap/bootstrap";
 
 // ==========================================================================
-// Settings
+// Core
 // ==========================================================================
 
 @import "core/mq-breakpoints",
@@ -30,6 +18,19 @@
 // ==========================================================================
 
 @import "../../../node_modules/sass-mq/mq";
+
+
+// ==========================================================================
+// Base
+// ==========================================================================
+
+@import "base/typography",
+"base/colors",
+"base/helpers",
+"base/base",
+"base/buttons",
+"base/padding",
+"base/headings";
 
 // ==========================================================================
 // Plugins
@@ -45,26 +46,53 @@
 @import "components/blocks",
 "components/social-icons",
 "components/site-nav",
-"components/header",
-"components/header1",
-"components/header2",
-"components/header3",
 "components/page-header",
 "components/hero",
-"components/procedure-cards",
-"components/procedure-hover",
-"components/procedures-accordian",
+"components/procedure-displaygrid",
 "components/single-page",
 "components/related-posts",
 "components/sidebar",
 "components/testimonials",
 "components/taptap",
 "components/footer",
-"components/footer1",
-"components/footer2",
-"components/footer3",
-"components/footer4",
-"components/footer5",
-"components/footer6",
+"components/footer7",
 "components/new-styles",
+"components/contact-page";
+
+// ==========================================================================
+// Headers
+// ==========================================================================
+
+@import "headers/header",
+"headers/header1",
+"headers/header2",
+"headers/header3";
+
+// ==========================================================================
+// Procedures
+// ==========================================================================
+
+@import "procedures/procedure-cards",
+"procedures/procedure-grid",
+"procedures/procedure-hover",
+"procedures/procedures-accordian",
+"procedures/procedures-hover";
+
+// ==========================================================================
+// Footers
+// ==========================================================================
+
+@import "footers/footer",
+"footers/footer1",
+"footers/footer2",
+"footers/footer3",
+"footers/footer4",
+"footers/footer5",
+"footers/footer6",
+"footers/footer7";
+
+// ==========================================================================
+// Breakpoints (needs to be removed in future
+// when everything gets refactored into correct folders.)
+// ==========================================================================
 "core/breakpoints";

@@ -15,10 +15,10 @@ function incredible__register_required_plugins()
             'required'           => true,
         ),
         array(
-            'name'               => 'Ubermenu Pro',
-            'slug'               => 'ubermenu-pro',
+            'name'               => 'UberMenu Responsive Mega Menu',
+            'slug'               => 'ubermenu-responsive-mega-menu',
             'source'             => get_template_directory() . '/includes/plugins/codecanyon-154703-ubermenu-wordpress-mega-menu-plugin.zip',
-            'external_url'       => 'https://wpmegamenu.com/',
+            'external_url'       => 'https://sevenspark.com/goods/ubermenu-responsive-mega-menu',
             'required'           => true,
         ),
         array(

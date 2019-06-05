@@ -1,52 +1,5 @@
-// ==========================================================================
-// Breakpoints
-// ==========================================================================
-
-    $mobile                                   : 320px;
-    $mobile-landscape                         : 480px;
-    $mobile-wide                              : 600px;
-    $tablet                                   : 768px;
-    $tablet-landscape                         : 1024px;
-    $site                                     : 960px;
-    $site-constraint                          : 1200px;
-    $desktop                                  : 1280px;
-    $desktop-wide                             : 1500px;
-
-    // Project Specific
-    // These should also be added to $mq-breakpoints map.
-
-// ==========================================================================
-// Media Queries
-// ==========================================================================
-
-    // Sass-mq Configuration
-    //
-    // Reference: https://github.com/sass-mq/sass-mq#adding-custom-breakpoints
-    //
-    // Name your breakpoints in a way that creates a ubiquitous language
-    // across team members. It will improve communication between
-    // stakeholders, designers, developers, and testers.
-    $mq-breakpoints: map-merge(
-        (
-            mobile                               : $mobile,
-            mobile-landscape                     : $mobile-landscape,
-            mobile-wide                          : $mobile-wide,
-            tablet                               : $tablet,
-            tablet-landscape                     : $tablet-landscape,
-            site                                 : $site,
-            site-constraint                      : $site-constraint,
-            desktop                              : $desktop,
-            desktop-wide                         : $desktop-wide,
-        ),
-        $grid-breakpoints
-    );
-
-    // Define the breakpoint from the $mq-breakpoints list that should
-    // be used as the target width when outputting a static stylesheet
-    // (i.e. when $mq-responsive is set to 'false').
-    $mq-static-breakpoint: tablet;
-
-    // Customize the media type (e.g. `@media screen` or `@media print`)
-    // By default sass-mq uses an "all" media type (`@media all and …`)
-    $mq-media-type: screen;
-
+$mq-breakpoints: map-merge((mobile: map-get($grid-breakpoints, sm),
+tablet: map-get($grid-breakpoints, md),
+desktop: map-get($grid-breakpoints, lg),
+),
+$grid-breakpoints);
