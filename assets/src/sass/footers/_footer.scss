@@ -99,6 +99,37 @@
     background-color: #fff;
 }
 
+/* Forms
+============================================================= */
+
+body footer .gform_wrapper .top_label div.ginput_container {
+    margin: 0;
+}
+
+footer,
+#sidebar {
+    .gform_wrapper {
+        .top_label {
+            .gfield_label {
+                margin: 0;
+                display: none;
+            }
+        }
+
+        ul.gform_fields {
+            li.gfield {
+                padding: 0;
+                margin: auto;
+            }
+        }
+
+        .gform_footer {
+            padding: 0;
+            margin: 2rem 0 0 0;
+        }
+    }
+}
+
 /* Copyright */
 .copyright {
     padding-top: 15px;

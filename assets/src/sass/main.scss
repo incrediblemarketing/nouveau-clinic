@@ -48,16 +48,12 @@
 "components/site-nav",
 "components/page-header",
 "components/hero",
-"components/procedure-displaygrid",
 "components/single-page",
 "components/related-posts",
 "components/sidebar",
 "components/testimonials",
 "components/taptap",
-"components/footer",
-"components/footer7",
-"components/new-styles",
-"components/contact-page";
+"components/new-styles";
 
 // ==========================================================================
 // Headers
@@ -79,6 +75,16 @@
 "procedures/procedures-hover";
 
 // ==========================================================================
+// Gallery
+// ==========================================================================
+
+@import "galleries/gallery",
+"galleries/archive2",
+"galleries/single1",
+"galleries/single2",
+"galleries/single3";
+
+// ==========================================================================
 // Footers
 // ==========================================================================
 
@@ -95,4 +101,4 @@
 // Breakpoints (needs to be removed in future
 // when everything gets refactored into correct folders.)
 // ==========================================================================
-"core/breakpoints";
+@import "core/breakpoints";

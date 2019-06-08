@@ -157,3 +157,54 @@
 #sidebar .sidebar-gallery .mini-gallery .owl-dot span {
     background: #000000;
 }
+
+#sidebar .sidebar-item:first-child {
+    background: #a71478;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#sidebar .sidebar-item:first-child h5 {
+    color: #fff;
+    margin: 0 0 15px;
+}
+
+#sidebar .gform_wrapper .gform_footer {
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+#sidebar input[type=submit] {
+    width: 100%;
+    margin: 0;
+}
+
+#sidebar .gform_wrapper {
+    margin: 0;
+}
+
+#sidebar input:not([type=submit]),
+#sidebar textarea {
+    background: rgba(255, 255, 255, .3);
+    border: none;
+    color: #fff;
+    padding: 8px !important;
+}
+
+#sidebar ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+#sidebar ::-moz-placeholder {
+    color: #fff;
+}
+
+#sidebar :-ms-input-placeholder {
+    color: #fff;
+}
+
+#sidebar :-moz-placeholder {
+    color: #fff;
+}

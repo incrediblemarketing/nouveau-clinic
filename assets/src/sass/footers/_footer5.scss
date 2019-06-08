@@ -39,3 +39,50 @@
 #footer.f5 :-moz-placeholder {
     color: #ddd;
 }
+
+footer.f5 .flex-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer.f5 .flex-info p {
+    display: flex;
+}
+
+footer.f5 .flex-info p svg {
+    margin: 5px 10px 10px 0;
+}
+
+footer.f5 .gform_wrapper .gfield input,
+footer.f5 .gform_wrapper .gfield textarea {
+    margin-bottom: 2rem;
+    padding: 8px 0 !important;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    background: transparent;
+    color: #fff;
+}
+
+footer.f5 input[type=submit] {
+    display: flex !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    width: 250px !important;
+    justify-content: center;
+}
+
+footer.f5 ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+footer.f5 ::-moz-placeholder {
+    color: #fff;
+}
+
+footer.f5 :-ms-input-placeholder {
+    color: #fff;
+}
+
+footer.f5 :-moz-placeholder {
+    color: #fff;
+}

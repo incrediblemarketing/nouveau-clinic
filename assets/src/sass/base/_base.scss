@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: $roboto;
+    font-family: $primary-font;
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
@@ -70,7 +70,15 @@ body {
     text-shadow: none;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
 
+input[type=submit] {
+    cursor: pointer;
+}
 
 #wrapper {
     margin: 0 auto !important;
@@ -97,15 +105,6 @@ p {
 
 .row {
     position: relative;
-}
-
-.tbl {
-    display: table;
-}
-
-.tbl .inner {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .aligncenter {
@@ -138,13 +137,8 @@ p {
 hr {
     background: $secondary;
     color: $secondary;
-    height: .04em;
-    margin: 0 0 1em;
-}
-
-ul {
-    display: inline-block;
-    margin-bottom: 25px;
+    height: 1px;
+    margin: 20px 0;
 }
 
 img {
@@ -158,11 +152,6 @@ img.attachment-medium,
 img.attachment-large,
 img.attachment-full {
     margin: 0 auto;
-}
-
-ul.owl-carousel {
-    padding-left: 0;
-    margin-bottom: 0;
 }
 
 .no-overflow {
