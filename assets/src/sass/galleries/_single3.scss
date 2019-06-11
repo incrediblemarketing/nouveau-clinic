@@ -29,11 +29,19 @@
     }
 
     .swiper-slide {
-        display: flex;
+        display: block;
+
+        @include mq(lg) {
+            display: flex;
+        }
 
         >div {
-            width: 50%;
+            width: 100%;
             color: #fff;
+
+            @include mq(lg) {
+                width: 50%;
+            }
 
             img {
                 width: 50%;
@@ -51,7 +59,11 @@
     }
 
     .desc {
-        padding: 0 50px;
+        padding: 35px 0px;
+
+        @include mq(lg) {
+            padding: 0 50px;
+        }
     }
 
     .breadcrumb {

@@ -42,9 +42,16 @@ footer.f6 .gform_wrapper ul.gform_fields li.gfield {
     width: 100%;
 }
 
-footer.f6 .gfield:nth-child(1) input,
-footer.f6 .gfield:nth-child(3) input {
-    width: calc(100% - 15px);
+footer.f6 .gfield:nth-child(1),
+footer.f6 .gfield:nth-child(3) {
+
+    input {
+        width: 100%;
+    }
+
+    @include mq(lg) {
+        width: calc(100% - 15px);
+    }
 }
 
 footer.f6 .gfield input,
