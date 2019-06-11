@@ -9,14 +9,18 @@ html {
 body {
     font-family: $primary-font;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 1.5em;
     overflow-x: hidden;
     color: $charcoal;
     background-color: $off-white;
     max-width: 100%;
     font-kerning: none;
     -webkit-font-smoothing: antialiased;
+
+    @include mq(xxl) {
+        font-size: 18px;
+    }
 }
 
 *:last-child {
