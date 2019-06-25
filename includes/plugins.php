@@ -17,7 +17,7 @@ function incredible__register_required_plugins()
         array(
             'name'               => 'UberMenu Responsive Mega Menu',
             'slug'               => 'ubermenu-responsive-mega-menu',
-            'source'             => get_template_directory() . '/includes/plugins/codecanyon-154703-ubermenu-wordpress-mega-menu-plugin.zip',
+            'source'             => get_template_directory() . '/includes/plugins/ubermenu.zip',
             'external_url'       => 'https://sevenspark.com/goods/ubermenu-responsive-mega-menu',
             'required'           => true,
         ),
