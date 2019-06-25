@@ -111,43 +111,40 @@ if ($showSidebar == 1) {
         }
     }
 
-    $procedures = get_field('turn_onoff_procedures', 'options');
-    if ($procedures == 1) {
-        $showprocedures = get_sub_field('show_procedures_menu');
-        $post_ID = get_the_ID();
-        if ($showprocedures == 1) {
-            echo '<h5>Procedures</h5>';
-            echo '<ul class="sidebar-menu">';
-            if ((wp_get_post_parent_id($post_ID) == 0) || (get_post_type($post_ID) != 'procedure')) {
-                wp_list_pages(array('post_type' => 'procedure', 'title_li' => '', 'depth' => 1));
-            } else {
-                wp_list_pages(array('post_type' => 'procedure', 'title_li' => '', 'child_of' => wp_get_post_parent_id($post_ID), 'depth' => 1));
-            }
-            echo '</ul>';
+
+    $showprocedures = get_sub_field('show_procedures_menu');
+    $post_ID = get_the_ID();
+    if ($showprocedures == 1) {
+        echo '<h5>Procedures</h5>';
+        echo '<ul class="sidebar-menu">';
+        if ((wp_get_post_parent_id($post_ID) == 0) || (get_post_type($post_ID) != 'procedure')) {
+            wp_list_pages(array('post_type' => 'procedure', 'title_li' => '', 'depth' => 1));
+        } else {
+            wp_list_pages(array('post_type' => 'procedure', 'title_li' => '', 'child_of' => wp_get_post_parent_id($post_ID), 'depth' => 1));
         }
+        echo '</ul>';
     }
 
-    $testimonials = get_field('turn_onoff_testimonials', 'options');
-    if ($testimonials == 1) :
-        $showtestimonials = get_sub_field('show_testimonials_rotator');
-        if ($showtestimonials == 1) :
-            $testimonials = get_sub_field('sidebar_testimonials');
-            echo '<div class="testimonial-container">';
-            echo '<h5 class="text-center">Testimonials</h5>';
-            if ($testimonials) : ?>
-                <div class="owl-carousel owl-theme testimonials-rotator">
-                    <?php foreach ($testimonials as $post) : ?>
-                        <?php setup_postdata($post); ?>
-                        <div class="item">
-                            <?php the_content(); ?>
-                            <strong><?php the_title(); ?></strong>
-                        </div>
-                    <?php endforeach; ?>
-                </div><?php
-                        wp_reset_postdata();
-                    endif;
-                    echo '</div>';
+
+
+    $showtestimonials = get_sub_field('show_testimonials_rotator');
+    if ($showtestimonials == 1) :
+        $testimonials = get_sub_field('sidebar_testimonials');
+        echo '<div class="testimonial-container">';
+        echo '<h5 class="text-center">Testimonials</h5>';
+        if ($testimonials) : ?>
+            <div class="owl-carousel owl-theme testimonials-rotator">
+                <?php foreach ($testimonials as $post) : ?>
+                    <?php setup_postdata($post); ?>
+                    <div class="item">
+                        <?php the_content(); ?>
+                        <strong><?php the_title(); ?></strong>
+                    </div>
+                <?php endforeach; ?>
+            </div><?php
+                    wp_reset_postdata();
                 endif;
+                echo '</div>';
             endif;
 
             $gallery = get_field('turn_onoff_gallery', 'options');

@@ -1,0 +1,207 @@
+#header.header4 {
+    height: 70px;
+    background: $primary;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    @include mq(sm) {
+        padding: 0 25px;
+    }
+
+    @include mq(md) {
+        height: 100px;
+    }
+
+    @include mq(xxl) {
+        height: 150px;
+    }
+
+    @include mq(xxl) {
+        padding: 0 140px;
+    }
+
+    .top-logo {
+        height: 60px;
+        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        @include mq(md) {
+            height: 75px;
+        }
+
+        @include mq(xxl) {
+            height: 104px;
+        }
+    }
+
+    .header-right,
+    .header-left {
+        width: 63px;
+
+        @include mq(sm) {
+            width: 40%;
+        }
+    }
+
+    .header-right {
+        text-align: right;
+    }
+
+    .header-left {
+        .btn-whiteborder:first-child {
+            margin-right: 10px;
+        }
+
+        .btn-whiteborder:nth-child(2) {
+            display: none;
+
+            @include mq(xl) {
+                display: inline-block;
+            }
+        }
+    }
+
+    .btn-whiteborder {
+        min-width: auto;
+        border-width: 1px;
+        font-size: 12px;
+        padding: 5px !important;
+        margin: 0;
+        width: 63px;
+        height: 42px;
+
+        @include mq(sm) {
+            width: auto;
+            font-size: 1rem;
+            padding: .5em 2em !important
+        }
+
+    }
+
+    button {
+        border: none;
+        width: 136px;
+        align-items: center;
+        display: flex;
+        background: none;
+        color: #fff;
+        margin-left: auto;
+        padding: 0;
+
+        p {
+            margin: 0;
+            font-family: $primary-font;
+            text-transform: uppercase;
+            font-size: 18px;
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+            }
+        }
+
+        svg {
+            opacity: 0;
+        }
+    }
+}
+
+body.h4-header {
+
+    &.scrolling {
+        #header.header4 {
+            height: 70px;
+            box-shadow: rgba($black, .2) 1px 1px 6px;
+
+            @include mq(md) {
+                height: 100px;
+            }
+        }
+
+        .taptap-menu-button-wrapper {
+            top: 16px;
+
+            @include mq(md) {
+                top: 30px;
+            }
+        }
+
+        #header.header4 .top-logo {
+            height: 60px;
+            width: auto;
+
+            @include mq(md) {
+                height: 75px;
+            }
+        }
+    }
+
+    main {
+        position: relative;
+        margin-top: 70px;
+
+        @include mq(md) {
+            margin-top: 100px;
+        }
+
+        @include mq(xxl) {
+            margin-top: 150px;
+        }
+    }
+
+    #hero {
+        height: calc(100vh - 100px);
+
+        @include mq(xxl) {
+            height: calc(100vh - 150px);
+        }
+    }
+
+    .taptap-menu-button-wrapper {
+        position: fixed;
+        top: 16px;
+        right: 15px;
+        width: 63px;
+        height: 42px;
+        left: auto;
+        transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        @include mq(sm) {
+            right: 25px;
+        }
+
+        @include mq(md) {
+            top: 30px;
+        }
+
+        @include mq(xxl) {
+            top: 54px;
+        }
+
+        @include mq(xxl) {
+            right: 140px;
+        }
+
+        .taptap-main-menu-button-two {
+            width: 63px;
+            height: 42px;
+            border: 1px solid #fff;
+            display: block;
+            padding: 5px 16px;
+
+            &::before,
+            &::after,
+            .taptap-main-menu-button-two-middle:before {
+                background-color: #fff;
+                margin-top: 4px;
+                margin-bottom: 7px;
+            }
+        }
+    }
+}

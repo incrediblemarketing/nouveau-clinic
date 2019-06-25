@@ -45,6 +45,7 @@ require_once get_template_directory() . '/includes/filters.php';
 // SIDEBARS
 // ==================================================
 require_once get_template_directory() . '/includes/sidebars/blog.php';
+require_once get_template_directory() . '/includes/sidebars/page_sidebar.php';
 
 // SHORTCODES
 // ==================================================
@@ -52,6 +53,7 @@ require_once get_template_directory() . '/includes/shortcodes/call_number.php';
 require_once get_template_directory() . '/includes/shortcodes/reusable_block.php';
 require_once get_template_directory() . '/includes/shortcodes/sidebar.php';
 require_once get_template_directory() . '/includes/shortcodes/child_pages.php';
+require_once get_template_directory() . '/includes/shortcodes/testimonials.php';
 
 // PLUGINS
 // ==================================================
