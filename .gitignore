@@ -11,6 +11,8 @@ Thumbs.db
 assets/dist/*
 *.zip
 buildtheme/*
+.vscode
+
 # Node #
 ######################
 
