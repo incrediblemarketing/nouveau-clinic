@@ -1,128 +1,159 @@
-.procedures-accordian .procedures-title {
-    text-align: center;
-    padding: 45px 0;
-    letter-spacing: 3px;
-}
+.procedures-accordian {
+    .procedures-title {
+        text-align: center;
+        letter-spacing: 3px;
+        padding: 15px 0;
 
-.procedures-accordian .procedures-title h3 {
-    color: $white;
-    margin-bottom: 0;
-}
+        @include mq(lg) {
+            padding: 45px 0;
+        }
 
-.procedures-accordian .procedures {
-    margin: 0 -15px 0 -16px;
-    padding: 0;
-    list-style-type: none;
-    height: calc(100vh - 180px);
-    overflow: hidden;
-    width: 100%;
-}
+        h3 {
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
 
-.procedures-accordian .procedures>li {
-    padding: 0;
-    float: left;
-    width: 16.666667%;
-    height: calc(100vh - 180px);
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    -webkit-filter: grayscale(100%);
-    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-}
+    .procedures {
+        height: auto;
+        margin: 0 -15px 0 -16px;
+        padding: 0;
+        list-style-type: none;
+        overflow: hidden;
+        width: 100%;
 
-.procedures-accordian .procedures>li:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 180px);
-    z-index: 9;
-    background: rgba(0, 0, 0, 0.4);
-    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-}
+        @include mq(lg) {
+            height: calc(100vh - 180px);
+        }
 
-.procedures-accordian .procedures>li h3 {
-    color: $white;
-    position: absolute;
-    top: calc(50% - 15px);
-    z-index: 10;
-    text-align: center;
-    width: 100%;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-}
+        >li {
+            width: 50%;
+            padding: 0;
+            float: left;
+            height: calc(100vh - 180px);
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            filter: grayscale(100%);
+            transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
 
-.procedures-accordian .procedures>li .sub-pages {
-    opacity: 0;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 20vh;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-transition-delay: .3s;
-    transition-delay: .3s;
-}
+            @include mq(md) {
+                width: 33.33333%;
+            }
 
-.procedures-accordian .procedures>li .sub-pages li {
-    padding: 3px 0;
-    background: transparent;
-    transition: all .3s linear;
-}
+            @include mq(lg) {
+                width: 16.666667%;
+            }
 
-.procedures-accordian .procedures>li .sub-pages li a {
-    color: $white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-}
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 180px);
+                z-index: 9;
+                background: rgba(0, 0, 0, 0.4);
+                transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+            }
 
-.procedures-accordian .procedures>li .sub-pages li:hover {
-    background: rgba(0, 0, 0, 0.18);
-}
+            h3 {
+                color: $white;
+                position: absolute;
+                top: calc(50% - 15px);
+                z-index: 10;
+                text-align: center;
+                width: 100%;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+            }
 
-.procedures-accordian .procedures>li.active {
-    width: 25%;
-    -webkit-filter: grayscale(0%);
-    -webkit-box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.75);
-    position: relative;
-    z-index: 10;
-}
+            .sub-pages {
+                opacity: 0;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                position: absolute;
+                top: 20vh;
+                left: 0;
+                width: 100%;
+                z-index: 10;
+                transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+                -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+                -webkit-transition-delay: .3s;
+                transition-delay: .3s;
 
-.procedures-accordian .procedures>li.active:before {
-    background: rgba(0, 0, 0, 0.4);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 180px);
-    border: 10px solid rgba(240, 237, 232, 0.7);
-}
+                li {
+                    padding: 3px 0;
+                    background: transparent;
+                    transition: all .3s linear;
 
-.procedures-accordian .procedures>li.active .sub-pages {
-    opacity: 1;
-}
+                    a {
+                        color: $white;
+                        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+                        text-transform: uppercase;
+                    }
 
-.procedures-accordian .procedures>li.active .sub-pages li a {
-    letter-spacing: normal;
-    transition: all .3s linear;
-}
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.18);
+                    }
+                }
+            }
 
-.procedures-accordian .procedures>li.active .sub-pages li:hover a {
-    letter-spacing: 3px;
-}
+            &.active {
+                filter: grayscale(0%);
+                box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.75);
+                position: relative;
+                width: 50%;
 
-.procedures-accordian .procedures>li.active h3 {
-    top: 10vh;
-}
+                @include mq(md) {
+                    width: 33.333%;
+                }
 
-.procedures-accordian .procedures.active>li:not(.active) {
-    width: 15%;
+                @include mq(lg) {
+                    width: 25%;
+                }
+
+                &::before {
+                    background: rgba(0, 0, 0, 0.4);
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 180px);
+                    border: 10px solid rgba(240, 237, 232, 0.7);
+                }
+
+                .sub-pages {
+                    opacity: 1;
+
+                    li {
+                        a {
+                            letter-spacing: normal;
+                            transition: all .3s linear;
+                        }
+
+                        &:hover a {
+                            letter-spacing: 3px;
+                        }
+                    }
+                }
+
+                h3 {
+                    top: 10vh;
+                }
+            }
+
+            &:not(.active) {
+                width: 50%;
+
+                @include mq(md) {
+                    width: 33.333%;
+                }
+
+                @include mq(lg) {
+                    width: 15%;
+                }
+            }
+        }
+    }
 }

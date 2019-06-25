@@ -5,9 +5,14 @@
     }
 
     .testimonials-rotator {
-        max-width: 90vw;
+        max-width: 86vw;
+        margin-top: 0;
         width: 100%;
-        margin-top: 2vh;
+
+        @include mq(md) {
+            max-width: 90vw;
+            margin-top: 2vh;
+        }
 
         p {
             margin-bottom: 20px;
@@ -37,6 +42,19 @@
             .swiper-button-next {
                 display: none;
             }
+        }
+    }
+
+    .primary-border {
+        margin: 5vh 0;
+        margin-bottom: -40px;
+
+        @include mq(md) {
+            margin-bottom: 0;
+        }
+
+        @include mq(lg) {
+            margin: unset;
         }
     }
 }

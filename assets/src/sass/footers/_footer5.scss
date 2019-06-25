@@ -1,3 +1,13 @@
+#footer.f5 {
+    #map {
+        height: 500px !important;
+
+        @include mq(lg) {
+            height: auto;
+        }
+    }
+}
+
 #footer.f5 i {
     font-size: 27px;
     margin-right: 15px;

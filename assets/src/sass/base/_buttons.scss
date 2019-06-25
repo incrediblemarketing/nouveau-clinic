@@ -1,6 +1,6 @@
 .btn,
 .read-more {
-    display: inline-block;
+    display: block;
     font-size: 1rem;
     font-family: $tertiary-font;
     padding: 0.5em 2em !important;
@@ -9,12 +9,13 @@
     z-index: 3;
     position: relative;
     transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     overflow: hidden;
     white-space: normal;
     border: 0 !important;
+
+    @include mq(sm) {
+        display: inline-block;
+    }
 
     &:focus {
         box-shadow: none !important;

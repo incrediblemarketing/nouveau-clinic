@@ -41,13 +41,17 @@
         top: 0;
         left: 0;
         min-width: 100vw;
-        min-height: 100vh;
-        height: auto;
-        width: auto;
         max-width: none;
         z-index: -1;
-        -webkit-animation: kenburns-top 20s ease-out both;
         animation: kenburns-top 20s ease-out both;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        @include mq(xxl) {
+            min-height: 100vh;
+            width: auto;
+        }
     }
 
     &.no-overlay:before {
@@ -63,18 +67,27 @@
         .info {
             display: block;
             position: relative;
-            width: 50vw;
-            max-width: 800px;
             margin: 0 auto;
             z-index: 2;
+            width: 100%;
+            max-width: calc(100% - 30px);
+
+            @include mq(lg) {
+                max-width: 75vw;
+            }
+
+            @include mq(xl) {
+                width: 50vw;
+                max-width: 800px;
+            }
 
             h1 {
                 font-size: 5em;
                 color: $white;
                 line-height: 1.1;
-                margin-bottom: 4rem;
                 text-transform: uppercase;
                 text-align: center;
+                margin-bottom: 3vh;
             }
 
             .btn {
@@ -83,7 +96,12 @@
             }
 
             &.left {
-                margin: 0 8.333337vw;
+                max-width: calc(100% - 30px);
+                margin: 0 auto;
+
+                @include mq(lg) {
+                    margin: 0 8.333337vw;
+                }
 
                 h1 {
                     font-size: 5rem;

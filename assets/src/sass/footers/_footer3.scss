@@ -6,14 +6,28 @@
 
     #map {
         display: block;
-        position: absolute !important;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 59%;
+        position: relative !important;
+
+        @include mq(md) {
+            width: 59%;
+            height: unset;
+            position: absolute !important;
+        }
+
+        @include mq(lg) {
+            width: 100%;
+        }
     }
 
     >.row {
-        padding: 0;
+        padding: 0 15px;
+
+        @include mq(md) {
+            padding: 0;
+        }
     }
 
     .col-bg {

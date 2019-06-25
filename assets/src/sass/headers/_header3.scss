@@ -1,33 +1,99 @@
-.header3 .social-icons {
-    margin-right: 2em !important;
-}
+.header3 {
+    .social-icons {
+        margin-right: 2em !important;
+        display: none;
 
-.header3 .social-icons li {
-    display: inline-block;
-}
+        @include mq(lg) {
+            display: block;
+        }
 
-.header3 .menu-container {
-    width: auto;
-    display: table;
-    margin-left: auto;
-}
+        li {
+            display: inline-block;
+        }
+    }
 
-.header3 nav.ubermenu {
-    border-top: 1px solid $white;
-}
+    .menu-container {
+        width: auto;
+        display: table;
+        margin-left: auto;
+    }
 
-.header3 nav.ubermenu .ubermenu-nav {
-    display: flex;
-}
+    nav.ubermenu {
+        border-top: 1px solid $white;
+        display: none;
 
-.header3 nav.ubermenu .ubermenu-nav>li {
-    flex-grow: 1;
-}
+        @include mq(lg) {
+            display: block;
+        }
 
-.header3 nav.ubermenu .ubermenu-nav>li a:after {
-    display: none !important;
-}
+        .ubermenu-nav {
+            display: flex;
 
-.header3 nav.ubermenu .ubermenu-nav>li .ubermenu-submenu {
-    min-width: 230px;
+            >li {
+                flex-grow: 1;
+
+                a {
+                    padding: 15px 5px;
+
+                    &::after {
+                        display: none !important;
+                    }
+                }
+
+                .ubermenu-submenu {
+                    min-width: 230px;
+                }
+            }
+        }
+    }
+
+    #logo {
+        position: absolute;
+        left: 80px;
+        top: 15px;
+
+        @include mq(lg) {
+            position: relative;
+            left: unset;
+            top: unset;
+        }
+    }
+
+    .btn {
+        right: 15px;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        position: absolute;
+        top: 25px;
+
+        @include mq(lg) {
+            right: unset;
+            position: relative;
+            top: unset;
+            width: auto;
+            height: auto;
+        }
+
+        svg,
+        i {
+            position: relative;
+            left: 0;
+            top: 0;
+            line-height: 40px;
+
+            @include mq(lg) {
+                left: -5px;
+                top: 2px;
+            }
+        }
+
+        span {
+            display: none;
+
+            @include mq(lg) {
+                display: inline-block;
+            }
+        }
+    }
 }

@@ -1,126 +1,151 @@
-.procedures-half .info {
-    width: 420px;
-    padding: 0 5vw;
-    color: $white;
-    display: table;
-    height: 500px;
-}
+.procedures-half {
+    .info {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 15px;
+        text-align: center;
+        color: $white;
 
-.procedures-half .info .inner {
-    display: table-cell;
-    vertical-align: middle;
-}
+        @include mq(md) {
+            width: 420px;
+            padding: 0 5vw;
+            display: table;
+            text-align: left;
+            height: 500px;
+        }
 
-.procedures-half .info h3 {
-    margin: 0;
-}
+        .inner {
+            display: block;
 
-.procedures-half .info h3.border {
-    color: $white;
-}
+            @include mq(md) {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
 
-.procedures-half .info h3.border:after {
-    background: $white;
-}
+        h3 {
+            margin: 0;
 
-.procedures-half .procedures-half-rotator {
-    width: calc(100% - 420px);
-    height: 100%;
-}
+            &.border {
+                color: $white;
 
-.procedures-half .procedures-half-rotator .swiper-slide {
-    padding: 30px;
-    width: 320px;
-}
+                &::after {
+                    display: none;
+                    background: $white;
 
-.procedures-half .procedures-half-rotator .swiper-slide img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    width: 100%;
-    height: auto;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-}
+                    @include mq(md) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 
-.procedures-half .procedures-half-rotator .swiper-slide:hover h3 {
-    top: 15px;
-}
+    .procedures-half-rotator {
+        width: 100%;
+        height: 100%;
 
-.procedures-half .procedures-half-rotator .swiper-slide:hover img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
+        @include mq(md) {
+            width: calc(100% - 420px);
+        }
 
-.procedures-half .procedures-half-rotator .swiper-slide:hover .btn {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    top: auto;
-    bottom: 15px;
-}
+        .swiper-slide {
+            padding: 30px;
+            width: 320px;
+            min-width: 200px;
 
-.procedures-half .procedures-half-rotator .swiper-slide:hover .small-desc {
-    opacity: 1;
-}
+            img {
+                transform: scale(1);
+                width: 100%;
+                height: auto;
+                transition: 0.4s;
+            }
 
-.procedures-half .procedures-half-rotator .swiper-slide h3 {
-    position: absolute;
-    top: 48%;
-    margin: 0;
-    text-align: center;
-    display: block;
-    width: calc(100% - 60px);
-    text-transform: uppercase;
-    font-size: 20px;
-    padding: 0;
-    color: $white;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-}
+            h3 {
+                position: absolute;
+                top: 48%;
+                margin: 0;
+                text-align: center;
+                display: block;
+                width: calc(100% - 60px);
+                text-transform: uppercase;
+                font-size: 20px;
+                padding: 0;
+                color: $white;
+                transition: 0.4s ease-in-out;
+            }
 
-.procedures-half .procedures-half-rotator .swiper-slide .btn {
-    position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-}
+            .btn {
+                width: 300px;
+                max-width: 85%;
+                position: absolute;
+                top: 62%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                opacity: 0;
+                transition: 0.4s ease-in-out;
 
-.procedures-half .procedures-half-rotator .swiper-slide .small-desc {
-    color: $white;
-    width: 100%;
-    margin: 0 auto;
-    font-size: 15px;
-    line-height: 1.5em;
-    text-align: center;
-    position: relative;
-    top: 20%;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-    -webkit-transition: 0.4s ease-in-out;
-    -moz-transition: 0.4s ease-in-out;
-    -o-transition: 0.4s ease-in-out;
-}
+                @include mq(md) {
+                    width: unset;
+                    max-width: unset;
+                }
+            }
 
-.procedures-half .procedures-half-rotator .swiper-slide:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
+            .small-desc {
+                color: $white;
+                width: 100%;
+                margin: 0 auto;
+                font-size: 15px;
+                text-align: center;
+                position: relative;
+                opacity: 0;
+                transition: 0.4s ease-in-out;
+                top: 14%;
+                line-height: 1.3em;
 
-.procedures-half .procedures-half-rotator .swiper-slide:hover:before {
-    background: rgba(0, 0, 0, 0.8);
+                @include mq(lg) {
+                    line-height: 1.5em;
+                    top: 20%;
+                }
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+
+            &:hover {
+                h3 {
+                    top: 15px;
+                }
+
+                img {
+                    transform: scale(1.2);
+                }
+
+                .btn {
+                    transform: translate(-50%, -50%);
+                    opacity: 1;
+                    top: auto;
+                    bottom: 15px;
+                }
+
+                .small-desc {
+                    opacity: 1;
+                }
+
+                &::before {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+    }
 }

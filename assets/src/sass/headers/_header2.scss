@@ -4,12 +4,26 @@
 
     #logo {
         position: relative;
-        left: 15px;
-        top: 0px;
-        margin-right: 15px;
+        left: auto;
+        top: 15px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        @include mq(sm) {
+            left: 80px;
+            top: 0px;
+            margin-right: 15px;
+        }
+
+        @include mq(lg) {
+            left: 15px;
+        }
     }
 
     nav {
+        display: none;
         position: relative;
         left: 0;
         top: 0;
@@ -17,6 +31,10 @@
         height: 70px;
         display: flex !important;
         align-items: center !important;
+
+        @include mq(lg) {
+            display: block;
+        }
 
         .ubermenu {
 
@@ -69,9 +87,33 @@
 
     }
 
-    .btn svg {
-        position: relative;
-        top: 2px;
-        left: -4px;
+    .btn {
+        right: 15px;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        position: absolute;
+        top: 25px;
+
+        svg,
+        i {
+            position: relative;
+            left: 0;
+            top: 0;
+            line-height: 40px;
+
+            @include mq(xl) {
+                top: 2px;
+                left: -4px;
+            }
+        }
+
+        span {
+            display: none;
+
+            @include mq(xl) {
+                display: inline-block;
+            }
+        }
     }
 }

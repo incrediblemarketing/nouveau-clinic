@@ -161,11 +161,21 @@
 
     svg {
         position: absolute;
-        bottom: 0;
         right: 0;
+        bottom: auto;
+        top: 0;
+
+        @include mq(lg) {
+            top: unset;
+            bottom: 0;
+        }
 
         polygon {
-            fill: $primary;
+            fill: $white;
+
+            @include mq(lg) {
+                fill: $primary;
+            }
         }
     }
 }
@@ -179,12 +189,22 @@
     height: 100%;
 
     svg {
+        top: auto;
+        bottom: 0;
         position: absolute;
-        top: 0;
         left: 0;
 
+        @include mq(lg) {
+            bottom: unset;
+            top: 0;
+        }
+
         polygon {
-            fill: $primary;
+            fill: $white;
+
+            @include mq(lg) {
+                fill: $primary;
+            }
         }
 
     }
@@ -259,6 +279,14 @@
 
 .cta a {
     margin-left: 30px;
+}
+
+.hide-sm {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
 }
 
 /* Visibility
