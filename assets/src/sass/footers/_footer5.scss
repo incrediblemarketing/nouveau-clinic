@@ -60,7 +60,7 @@ footer.f5 .gform_wrapper .gfield textarea {
     border: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 1);
     background: transparent;
-    color: #fff;
+    color: $white;
 }
 
 footer.f5 input[type=submit] {
@@ -72,17 +72,17 @@ footer.f5 input[type=submit] {
 }
 
 footer.f5 ::-webkit-input-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 footer.f5 ::-moz-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 footer.f5 :-ms-input-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 footer.f5 :-moz-placeholder {
-    color: #fff;
+    color: $white;
 }

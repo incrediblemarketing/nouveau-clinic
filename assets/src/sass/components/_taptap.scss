@@ -1,14 +1,13 @@
-.taptap-widgets-wrapper .widget a {
-    color: $white;
-    border: 1px solid $primary;
-    background: $primary;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-}
+.taptap-widgets-wrapper .widget {
+    a {
+        color: $white;
+        border: 1px solid $primary;
+        background: $primary;
+        transition: 0.4s;
+    }
 
-.taptap-widgets-wrapper .widget a:hover {
-    color: $primary;
-    background: $white;
+    &:hover {
+        color: $primary;
+        background: $white;
+    }
 }

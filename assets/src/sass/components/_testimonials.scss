@@ -1,55 +1,42 @@
-.testimonials h3 {
-    margin: 5vh auto 0;
-    text-align: center;
-}
+.testimonials {
+    h3 {
+        margin: 5vh auto 0;
+        text-align: center;
+    }
 
-.testimonials .testimonials-rotator {
-    max-width: 90vw;
-    width: 100%;
-    margin-top: 2vh;
-}
+    .testimonials-rotator {
+        max-width: 90vw;
+        width: 100%;
+        margin-top: 2vh;
 
-.testimonials .testimonials-rotator p {
-    margin-bottom: 20px;
-}
+        p {
+            margin-bottom: 20px;
+        }
 
-.testimonials .testimonials-rotator strong {
-    font-size: 1.2em;
-}
+        strong {
+            font-size: 1.2em;
+        }
 
-.testimonials .testimonials-rotator .swiper-slide {
-    padding: 5vw 10vw;
-}
+        .swiper-slide {
+            padding: 5vw 10vw;
+        }
+    }
 
-.testimonials .primary-overlay {
-    padding: 5vh 3vw;
-}
+    .primary-overlay {
+        padding: 5vh 3vw;
 
-.testimonials .primary-overlay .testimonials-rotator {
-    max-width: 76.5vw;
-    margin-top: 0;
-}
+        .testimonials-rotator {
+            max-width: 76.5vw;
+            margin-top: 0;
 
-.testimonials .primary-overlay .testimonials-rotator strong {
-    color: $white;
-}
+            strong {
+                color: $white;
+            }
 
-.testimonials .primary-overlay .testimonials-rotator .swiper-button-prev,
-.testimonials .primary-overlay .testimonials-rotator .swiper-button-next {
-    display: none;
-}
-
-.testimonials .simple .owl-carousel {
-    margin-top: 0;
-}
-
-.testimonials .simple .owl-carousel .owl-item img {
-    width: auto;
-    border-radius: 100%;
-    margin-bottom: 15px;
-}
-
-.testimonials .simple .owl-carousel .owl-item strong {
-    font-family: Sacramento;
-    font-size: 1.9em;
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+        }
+    }
 }

@@ -52,7 +52,7 @@
         dataCss: function() {
           $('[data-bg]').each(function() {
             var bg = $(this).data('bg');
-            $(this).css('background', '#fff url("' + bg + '") top center/cover no-repeat');
+            $(this).css('background', '$white url("' + bg + '") top center/cover no-repeat');
           });
 
           $('[data-bgc]').each(function() {

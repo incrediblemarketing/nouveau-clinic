@@ -167,7 +167,7 @@
 }
 
 #sidebar .sidebar-item:first-child h5 {
-    color: #fff;
+    color: $white;
     margin: 0 0 15px;
 }
 
@@ -189,22 +189,22 @@
 #sidebar textarea {
     background: rgba(255, 255, 255, .3);
     border: none;
-    color: #fff;
+    color: $white;
     padding: 8px !important;
 }
 
 #sidebar ::-webkit-input-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 #sidebar ::-moz-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 #sidebar :-ms-input-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 #sidebar :-moz-placeholder {
-    color: #fff;
+    color: $white;
 }

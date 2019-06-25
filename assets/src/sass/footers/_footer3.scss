@@ -23,7 +23,7 @@
 
     h3 {
         font-size: 3em;
-        color: #fff;
+        color: $white;
     }
 
     h4 {
@@ -36,14 +36,14 @@
             position: relative;
             z-index: 1;
             padding-right: 15px;
-            color: #fff;
+            color: $white;
         }
 
         &::after {
             content: '';
             height: 2px;
             width: 100%;
-            background: #fff;
+            background: $white;
             position: absolute;
             left: 0;
             top: 50%;
@@ -54,7 +54,7 @@
     .squared {
         font-size: 20px;
         background: $primary;
-        color: #fff;
+        color: $white;
         width: 35px;
         height: 35px;
         line-height: 35px;
@@ -73,7 +73,7 @@
             font-size: 1em;
             padding: 0px;
             display: block;
-            color: #fff;
+            color: $white;
             font-weight: 500;
         }
 
@@ -87,7 +87,7 @@
     }
 
     p a {
-        color: #fff;
+        color: $white;
 
         &:hover {
             color: $primary;
@@ -106,7 +106,7 @@
     }
 
     .copyright {
-        color: #fff;
+        color: $white;
 
         p {
             margin: 0;
@@ -129,7 +129,7 @@
                 background: rgba(255, 255, 255, .3);
                 border: none;
                 padding: 8px 15px !important;
-                color: #fff;
+                color: $white;
             }
         }
 

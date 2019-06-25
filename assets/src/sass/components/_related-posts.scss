@@ -4,7 +4,7 @@
 
 .related-posts h3 {
     font-size: 2em;
-    font-family: "Playfair Display SC";
+    font-family: $secondary-font;
     margin-bottom: 30px;
 }
 
@@ -16,8 +16,8 @@
     font-size: 1em;
     font-weight: 300;
     margin-bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
-    color: #b4be81;
+    font-family: $secondary-font;
+    color: $primary;
 }
 
 .related-posts li .post-excerpt p:first-of-type {

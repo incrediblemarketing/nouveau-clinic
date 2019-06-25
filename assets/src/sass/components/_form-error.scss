@@ -1,6 +1,6 @@
 .gform_wrapper {
     div.validation_error {
-        color: #fff;
+        color: $white;
         background: $error;
         border-color: $error;
         font-weight: normal;
@@ -27,11 +27,61 @@
     }
 
     &.gform_validation_error {
-        .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
-            max-width: 100% !important;
-            border: 0;
-            background: transparent;
-            margin: 0;
+        .validation_error {
+            color: $white;
+            border: none;
+            background: $error;
+            margin: 0 0 35px 0;
+            padding: 15px 15px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .gform_body {
+            ul.gform_fields {
+                li {
+                    label {
+                        top: -2px;
+                        padding: 6px;
+                        left: 15px;
+                    }
+
+                    .validation_message {
+                        color: $error;
+                    }
+                }
+
+                li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+                    max-width: 100% !important;
+                    margin: 0 !important;
+                    border: none;
+                    background: transparent;
+                    width: 100%;
+
+                    label {
+                        top: -12px;
+                        padding: 6px;
+                        left: 15px;
+                    }
+
+                    div.ginput_container {
+                        margin-top: 0;
+                    }
+
+                    input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+                    textarea {
+                        border: 1px solid $error;
+                        padding: 12px 20px !important;
+                    }
+
+                    div.gfield_description,
+                    .validation_message {
+                        padding: 0;
+                        font-size: 1rem;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }

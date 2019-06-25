@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: $tertiary-font;
     font-weight: 300;
 }
 
@@ -20,7 +20,7 @@ h1 {
             display: block;
             width: 150px;
             height: 2px;
-            background: #b4be81;
+            background: $primary;
             margin: 30px auto;
         }
 

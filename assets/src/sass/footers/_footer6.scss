@@ -1,5 +1,5 @@
 #footer.f6 h4 {
-    color: #fff;
+    color: $white;
     font-family: Avenir;
     font-size: 68px;
     font-weight: 700;
@@ -21,19 +21,19 @@
 }
 
 #footer.f6 ::-webkit-input-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 #footer.f6 ::-moz-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 #footer.f6 :-ms-input-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 #footer.f6 :-moz-placeholder {
-    color: #fff;
+    color: $white;
 }
 
 footer.f6 .gform_wrapper ul.gform_fields li.gfield {
@@ -59,7 +59,7 @@ footer.f6 .gfield textarea {
     background: rgba(255, 255, 255, .45);
     border: 1px solid rgba(153, 153, 153, 0.5);
     box-shadow: rgb(153, 153, 153) 1px 1px 1px;
-    color: #fff;
+    color: $white;
     padding: 12px !important;
     margin-bottom: 1.25rem;
 }

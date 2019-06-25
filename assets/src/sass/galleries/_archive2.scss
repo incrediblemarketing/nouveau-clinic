@@ -38,7 +38,7 @@
             text-align: center;
             font-size: 24px;
             z-index: 3;
-            color: #fff;
+            color: $white;
             transition: all 300ms linear;
             transition-delay: 200ms;
         }
@@ -57,7 +57,7 @@
 
             a {
                 display: block;
-                color: #fff;
+                color: $white;
                 font-weight: 300;
                 text-transform: uppercase;
                 font-size: 18px;
@@ -100,7 +100,7 @@
     }
 
     h4.fancy {
-        color: #fff;
+        color: $white;
         margin: 20px 0;
         display: flex;
         flex-direction: row;
