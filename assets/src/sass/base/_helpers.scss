@@ -64,6 +64,9 @@
     order: 3;
 }
 
+/* Video Background
+============================================================================ */
+
 .bg-video {
     position: absolute;
     top: 0;
@@ -86,6 +89,7 @@
 
 /* Images
    ========================================================================== */
+
 .img.border-right,
 .img.border-left {
     display: inline-block;
@@ -134,6 +138,8 @@
     }
 }
 
+/* Inner Block
+   ========================================================================== */
 
 .inner-block {
     padding: 9.5vh 8.33333%;
@@ -142,6 +148,9 @@
     background: #fff;
 }
 
+/* Slants
+   ========================================================================== */
+
 .slant-right {
     position: absolute;
     right: 0;
@@ -149,16 +158,16 @@
     width: 100vw;
     z-index: -1;
     height: 100vw;
-}
 
-.slant-right svg {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
+    svg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
 
-.slant-right svg polygon {
-    fill: $primary;
+        polygon {
+            fill: $primary;
+        }
+    }
 }
 
 .slant-left {
@@ -168,55 +177,62 @@
     width: 100vw;
     z-index: -1;
     height: 100%;
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        polygon {
+            fill: $primary;
+        }
+
+    }
 }
 
-.slant-left svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.slant-left svg polygon {
-    fill: $primary;
-}
+/* Quotes
+   ========================================================================== */
 
 .quotes {
     position: relative;
+
+    &::before {
+        content: '\f10d';
+        font-family: 'Font Awesome 5 Pro';
+        opacity: .1;
+        position: absolute;
+        top: 18px;
+        left: -50px;
+        font-size: 150px;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '\f10e';
+        font-family: 'Font Awesome 5 Pro';
+        opacity: .1;
+        position: absolute;
+        bottom: -18px;
+        right: -50px;
+        font-size: 150px;
+        z-index: -1;
+    }
 }
 
-.quotes:before {
-    content: "\f10d";
-    font-family: FontAwesome;
-    opacity: .1;
-    position: absolute;
-    top: 18px;
-    left: -50px;
-    font-size: 150px;
-    z-index: -1;
-}
-
-.quotes:after {
-    content: "\f10e";
-    font-family: FontAwesome;
-    opacity: .1;
-    position: absolute;
-    bottom: -18px;
-    right: -50px;
-    font-size: 150px;
-    z-index: -1;
-}
+/* Overlays
+   ========================================================================== */
 
 .hasOverlay {
     position: relative;
-}
 
-.hasOverlay * {
-    color: #fff;
-}
+    * {
+        color: #fff;
+    }
 
-.hasOverlay>* {
-    z-index: 1;
-    position: relative;
+    >* {
+        z-index: 1;
+        position: relative;
+    }
 }
 
 .primary-overlay {
@@ -230,16 +246,11 @@
     opacity: 0.7;
 }
 
-.primary-top {
-    border-top: 10px solid $primary;
-}
-
-/* Visibility
+/* General
    ========================================================================== */
 
-.visuallyhidden,
-.screen-reader-text {
-    @extend %visuallyhidden;
+.primary-top {
+    border-top: 10px solid $primary;
 }
 
 .cta p {
@@ -248,4 +259,12 @@
 
 .cta a {
     margin-left: 30px;
+}
+
+/* Visibility
+   ========================================================================== */
+
+.visuallyhidden,
+.screen-reader-text {
+    @extend %visuallyhidden;
 }

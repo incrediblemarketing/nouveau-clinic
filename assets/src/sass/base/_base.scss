@@ -7,16 +7,20 @@ html {
 }
 
 body {
-    font-family: $roboto;
+    font-family: $primary-font;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 1.5em;
     overflow-x: hidden;
     color: $charcoal;
     background-color: $off-white;
     max-width: 100%;
     font-kerning: none;
     -webkit-font-smoothing: antialiased;
+
+    @include mq(xxl) {
+        font-size: 18px;
+    }
 }
 
 *:last-child {
@@ -70,7 +74,15 @@ body {
     text-shadow: none;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
 
+input[type=submit] {
+    cursor: pointer;
+}
 
 #wrapper {
     margin: 0 auto !important;
@@ -97,15 +109,6 @@ p {
 
 .row {
     position: relative;
-}
-
-.tbl {
-    display: table;
-}
-
-.tbl .inner {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .aligncenter {
@@ -138,13 +141,8 @@ p {
 hr {
     background: $secondary;
     color: $secondary;
-    height: .04em;
-    margin: 0 0 1em;
-}
-
-ul {
-    display: inline-block;
-    margin-bottom: 25px;
+    height: 1px;
+    margin: 20px 0;
 }
 
 img {
@@ -158,11 +156,6 @@ img.attachment-medium,
 img.attachment-large,
 img.attachment-full {
     margin: 0 auto;
-}
-
-ul.owl-carousel {
-    padding-left: 0;
-    margin-bottom: 0;
 }
 
 .no-overflow {

@@ -33,3 +33,18 @@
 #footer.f4 .social-icons {
     margin-top: 20px;
 }
+
+footer.f4 .gform_wrapper .gfield input,
+footer.f4 .gform_wrapper .gfield textarea {
+    margin-bottom: 1.5rem;
+    padding: 8px 0 !important;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+footer.f4 input[type=submit] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 !important;
+}

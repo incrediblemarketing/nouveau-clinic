@@ -1,4 +1,9 @@
 #footer.f3 {
+
+    .squared {
+        padding: 7px;
+    }
+
     #map {
         display: block;
         position: absolute !important;
@@ -112,5 +117,33 @@
         display: flex;
         align-items: center;
         margin-bottom: 0;
+    }
+
+    .gform_wrapper {
+
+        .gfield {
+
+            input,
+            textarea {
+                margin-bottom: 1rem;
+                background: rgba(255, 255, 255, .3);
+                border: none;
+                padding: 8px 15px !important;
+                color: #fff;
+            }
+        }
+
+        .gform_footer {
+            margin: 0;
+            text-align: right;
+
+            input[type=submit] {
+                margin: 0 !important
+            }
+        }
+    }
+
+    ::placeholder {
+        color: $white;
     }
 }

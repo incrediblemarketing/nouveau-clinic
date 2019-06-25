@@ -1,0 +1,123 @@
+.gallery-archive.a2 {
+    background: #000;
+
+    .inner-container {
+        border: 1px solid $dark-gray;
+        padding: 15px 30px;
+    }
+
+    .item {
+        position: relative;
+        height: 100%;
+        background: #000;
+        width: 100% !important;
+        overflow: hidden;
+
+        @include mq(xl) {
+            padding: 0 5px;
+        }
+
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            z-index: -1;
+            transform: scale(1);
+            filter: grayscale(100%);
+            transition: all 300ms linear;
+        }
+
+        h3 {
+            position: absolute;
+            top: 30%;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            z-index: 3;
+            color: #fff;
+            transition: all 300ms linear;
+            transition-delay: 200ms;
+        }
+
+        .child-pages {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            z-index: 3;
+            transition: all 300ms linear;
+            transition-delay: 200ms;
+
+            a {
+                display: block;
+                color: #fff;
+                font-weight: 300;
+                text-transform: uppercase;
+                font-size: 18px;
+                margin-bottom: 10px;
+                position: relative;
+
+                &:hover {
+                    color: $primary;
+                }
+
+                &::after {
+                    content: '';
+                    height: 110%;
+                    width: 110%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: rgba(0, 0, 0, 0.3);
+                    z-index: 1;
+                    transition: all 300ms linear;
+                    -webkit-transition: all 300ms linear;
+                }
+            }
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+                transform: scale(1.05);
+            }
+
+            h3 {
+                color: $primary;
+            }
+
+            &::after {
+                background: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+
+    h4.fancy {
+        color: #fff;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        text-align: left;
+
+        &::after {
+            background-color: $primary;
+            content: '\a0';
+            flex-grow: 1;
+            height: 1px;
+            position: relative;
+            top: 0.5em;
+        }
+
+        span {
+            padding-right: 15px;
+        }
+    }
+}

@@ -26,29 +26,3 @@
         margin-right: 5px;
     }
 }
-
-body.btn-rounded {
-    .social-icons {
-        a {
-            border-radius: 50%;
-            border: 1px solid #fff;
-        }
-    }
-
-    .btn {
-        border-radius: 1em;
-    }
-}
-
-body.btn-rounded body.btn-boxed {
-    .btn {
-        border-radius: 0;
-    }
-
-    .social-icons {
-        a {
-            border-radius: 0;
-            border: none;
-        }
-    }
-}

@@ -6,104 +6,135 @@
     margin: 0;
     align-items: center;
     justify-content: center;
+
+    &.video-overlay:before {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100vw;
+        min-height: 100vh;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        height: auto;
+        width: auto;
+        max-width: none;
+        z-index: -1;
+        -webkit-animation: kenburns-top 20s ease-out both;
+        animation: kenburns-top 20s ease-out both;
+    }
+
+    &.no-overlay:before {
+        display: none !important;
+    }
+
+    .inner {
+
+        &.left {
+            margin-right: auto;
+        }
+
+        .info {
+            display: block;
+            position: relative;
+            width: 50vw;
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 2;
+
+            h1 {
+                font-size: 5em;
+                color: #fff;
+                line-height: 1.1;
+                margin-bottom: 4rem;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            .btn {
+                width: 100%;
+                display: block;
+            }
+
+            &.left {
+                margin: 0 8.333337vw;
+
+                h1 {
+                    font-size: 5rem;
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+
+                h3 {
+                    color: #fff;
+                    font-size: 1.7rem;
+                    text-align: left;
+                    margin-bottom: 40px;
+                }
+
+                .btn {
+                    max-width: 350px;
+                }
+            }
+        }
+    }
 }
 
-#hero.no-overlay:before {
-    display: none !important;
-}
 
-#hero .inner {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#hero .inner.left {
-    margin-right: auto;
-}
-
-#hero .inner .info {
-    display: block;
-    position: relative;
-    width: 50vw;
-    max-width: 800px;
-    margin: 0 auto;
-    z-index: 2;
-}
-
-#hero .inner .info.left {
-    margin: 0 8.333337vw;
-}
-
-#hero .inner .info.left h1 {
-    font-size: 5rem;
-    margin-bottom: 0;
-    text-align: left;
-}
-
-#hero .inner .info.left h3 {
-    color: #fff;
-    font-size: 1.7rem;
-    text-align: left;
-    margin-bottom: 40px;
-}
-
-#hero .inner .info.left .btn {
-    max-width: 350px;
-}
-
-#hero .inner .info h1 {
-    font-size: 5em;
-    color: #fff;
-    line-height: 1.1;
-    margin-bottom: 4rem;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-#hero .inner .info .btn {
-    width: 100%;
-    display: block;
-}
-
-#hero img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    height: auto;
-    width: auto;
-    max-width: none;
-    z-index: -1;
-    -webkit-animation: kenburns-top 20s ease-out both;
-    animation: kenburns-top 20s ease-out both;
-}
-
-#hero video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100vw;
-    min-height: 100vh;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
-}
-
-#hero:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+#hero.hero-slider {
     height: 100vh;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
+    display: block;
+    align-items: unset;
+    justify-content: unset;
 
-#hero.video-overlay:before {
-    background: rgba(0, 0, 0, 0.2);
+    .swiper-slide {
+        width: 100%;
+        height: 100vh;
+        min-width: 100%;
+        display: block;
+
+        .inner-flex {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        &.overlay::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
 }
