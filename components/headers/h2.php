@@ -4,7 +4,7 @@
             <a class="logo align-self-center" href="<?php echo esc_url(home_url('/')); ?>">
                 <?php get_template_part('components/svg/logo'); ?>
             </a>
-            <nav role="navigation" class="d-flex align-items-center">
+            <nav role="navigation" class="align-items-center">
                 <?php ubermenu('main', array('menu' => 3)); ?>
             </nav>
             <?php if ($hsi == 1) { ?>

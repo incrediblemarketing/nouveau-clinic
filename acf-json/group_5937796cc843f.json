@@ -739,6 +739,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5d1505ae61cba",
+            "label": "Footer Text",
+            "name": "footer_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59839253974ff",
             "label": "Map Image",
             "name": "map_image",
@@ -1442,5 +1461,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561656689
+    "modified": 1561658806
 }

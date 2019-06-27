@@ -8,6 +8,13 @@
         background-attachment: fixed !important;
     }
 
+    >.row {
+        @include mq($until: md) {
+            margin: 0;
+            padding: 95px 0 45px;
+        }
+    }
+
     &::before {
         content: '';
         display: block;
@@ -108,6 +115,11 @@
         .logo__footer {
             display: none;
 
+            svg {
+                height: 50px;
+                width: auto;
+            }
+
             @include mq(md) {
                 display: block;
             }
@@ -129,6 +141,7 @@
 
         .copyright {
             padding: 0 10px;
+            color: $white;
         }
     }
 
@@ -162,13 +175,13 @@
     color: $white;
     padding: 5.1vh 4.1vw;
 
-    .btn-whiteborder {
-        margin-top: 5vh;
-        min-width: 50%;
+    .business-text {
+        margin-bottom: 25px;
+    }
 
-        @include mq(xxl) {
-            margin-top: 60px;
-        }
+    .btn {
+        margin-top: 25px;
+        min-width: 50%;
     }
 
     a {
