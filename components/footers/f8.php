@@ -1,10 +1,11 @@
 <?php $business_location = get_field('business_locations', 'options')[0]; ?>
+
 <footer id="footer" class="f8 clearfix container-fluid  <?php if (is_page('contact-us')) : echo 'page__contact';
                                                         endif; ?> " data-bg="<?php echo get_field('footer_background', 'options'); ?>">
     <div class="row justify-content-center">
         <?php if (!is_page('contact-us')) : ?>
-            <div class="col-xl-2 col-md-10 col-12">
-                <img src="<?php echo get_field('logo_image', 'options'); ?>" class="footer-logo" />
+            <div class="col-xl-2 col-md-10 col-12 svg-holder">
+                <?php get_template_part('components/svg/logo'); ?>
             </div>
             <div class="col-xl-2 col-md-5 col-sm-7 block__info">
                 <h4>Visit Us</h4>

@@ -1,7 +1,7 @@
 <header id="header" class="header4">
     <div class="header-left">
-        <a href="/contact-us/" class="btn btn-whiteborder">BOOK NOW</a>
-        <a href="/specials/" class="btn btn-whiteborder">SPECIAL &amp; RESOURCES</a>
+        <a href="/contact-us/" class="btn btn-primary">BOOK NOW</a>
+        <?php get_template_part('components/call'); ?>
     </div>
     <?php get_template_part('components/svg/logo'); ?>
     <div class="header-right">
