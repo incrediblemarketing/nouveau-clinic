@@ -1,29 +1,47 @@
-.btn,
-.read-more {
-    display: block;
-    font-size: 1rem;
-    font-family: $tertiary-font;
-    padding: 0.5em 2em !important;
-    text-decoration: none !important;
-    text-align: center;
-    z-index: 3;
+.btn {
     position: relative;
-    transition: 0.4s;
+    border-radius: 0;
     overflow: hidden;
-    white-space: normal;
-    border: 0 !important;
+    z-index: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    width: 100%;
+    transition: all .4s ease;
 
-    @include mq(sm) {
-        display: inline-block;
+    @include mq(lg) {
+        width: 250px;
     }
 
-    &:focus {
-        box-shadow: none !important;
-    }
-
-    svg,
     i {
-        font-size: .85em;
-        margin-right: 5px;
+        margin-left: 25px;
+    }
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.btn-primary {
+    background: $primary;
+    color: $white;
+    border: 1px solid $primary;
+
+    &:hover {
+        background: $white;
+        color: $primary;
+    }
+}
+
+.btn-secondary {
+    background: $secondary;
+    color: $white;
+    border: 1px solid $secondary;
+
+    &:hover {
+        background: $white;
+        color: $secondary;
     }
 }
