@@ -22,10 +22,8 @@
     $sticky = get_field('sticky_header', 'options');
     $hideHeader = get_field('hide_page_header');
     ?>
-    <?php if ($sticky == 1) : ?>
-        <?php echo get_template_part('components/site-nav-sticky'); ?>
-    <?php endif; ?>
-    <?php echo get_template_part('components/header/' . $h1 . ''); ?>
+
+    <?php echo get_template_part('components/headers/' . $h1 . ''); ?>
 
     <main role="main" class="container-fluid">
         <?php

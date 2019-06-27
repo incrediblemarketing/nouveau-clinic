@@ -20,12 +20,12 @@ if (have_rows('sections')) :
             /* 1 COLUMN SECTION
 			================================================*/
         } elseif (get_row_layout() == '1_column') {
-            echo get_template_part('components/block/column-one');
+            echo get_template_part('components/blocks/column-one');
 
             /* 2 COLUMN SECTION
 			================================================*/
         } elseif (get_row_layout() == '2_column') {
-            echo get_template_part('components/block/column-two');
+            echo get_template_part('components/blocks/column-two');
 
 
             /* 3 COLUMN SECTION
