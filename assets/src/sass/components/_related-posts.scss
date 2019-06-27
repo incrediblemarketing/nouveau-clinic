@@ -1,57 +1,37 @@
 .related-posts ul {
     list-style-type: none;
-}
 
-.related-posts h3 {
-    font-size: 2em;
-    font-family: $secondary-font;
-    margin-bottom: 30px;
-}
+    h3 {
+        font-size: 2em;
+        font-family: $secondary-font;
+        margin-bottom: 30px;
+    }
 
-.related-posts h4 {
-    min-height: 70px;
-}
+    h4 {
+        min-height: 70px;
 
-.related-posts h4 a {
-    font-size: 1em;
-    font-weight: 300;
-    margin-bottom: 10px;
-    font-family: $secondary-font;
-    color: $primary;
-}
+        a {
+            font-size: 1em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            font-family: $secondary-font;
+            color: $primary;
+        }
+    }
 
-.related-posts li .post-excerpt p:first-of-type {
-    line-height: 1.5em;
-    margin: 0;
-    min-height: 215px;
-}
+    li {
+        .post-excerpt {
+            p {
+                &:first-of-type {
+                    line-height: 1.5em;
+                    margin: 0;
+                    min-height: 215px;
+                }
 
-.related-posts li .post-excerpt p:last-of-type {
-    display: none;
-}
-
-.related-posts .owl-dots {
-    margin-top: 20px;
-}
-
-.related-posts .owl-nav {
-    position: absolute;
-    top: calc(50% - 11px);
-    margin: 0;
-    width: calc(100% + 80px);
-    left: -40px;
-}
-
-.related-posts .owl-nav [class*=owl-] {
-    margin: 0;
-    border-radius: 0;
-    position: absolute;
-}
-
-.related-posts .owl-nav .owl-next {
-    right: 0;
-}
-
-.related-posts .owl-nav .owl-prev {
-    left: 0;
+                &:last-of-type {
+                    display: none;
+                }
+            }
+        }
+    }
 }
