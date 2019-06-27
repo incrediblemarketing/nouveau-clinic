@@ -6,6 +6,11 @@
         transform: translate(-50%, -50%);
     }
 
+    .header-top {
+        height: 100%;
+        padding: 0 25px;
+    }
+
     nav.ubermenu {
         display: none;
 
@@ -65,13 +70,27 @@
 
     }
 
-    #logo {
+    .header-left,
+    .header-right {
+        width: 30vw;
+    }
+
+    .header-right {
+        text-align: right;
+    }
+
+    .logo {
         position: relative;
         top: 15px;
         width: 100%;
         display: block;
         margin: 0 auto;
         text-align: center;
+
+        svg {
+            height: 80px;
+            width: auto;
+        }
 
         @include mq(sm) {
             position: absolute;

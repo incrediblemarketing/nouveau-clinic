@@ -1,7 +1,8 @@
 {
     "key": "group_59517b2a867cb",
     "title": "Gallery",
-    "fields": [{
+    "fields": [
+        {
             "key": "field_59517b2f6b150",
             "label": "Images",
             "name": "gallery_images",
@@ -24,7 +25,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "return_format": "array",
+            "preview_size": "medium"
         },
         {
             "key": "field_5c37c34b44dcf",
@@ -69,11 +72,13 @@
         }
     ],
     "location": [
-        [{
-            "param": "post_type",
-            "operator": "==",
-            "value": "gallery"
-        }]
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gallery"
+            }
+        ]
     ],
     "menu_order": 0,
     "position": "normal",
@@ -82,5 +87,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": ""
+    "description": "",
+    "modified": 1561653989
 }

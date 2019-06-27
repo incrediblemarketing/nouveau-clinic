@@ -17,13 +17,13 @@
 
 <body <?php body_class($btnStyle); ?>>
     <?php
-    $hl = get_field('header_layout', 'options');
-    $hsi = get_field('header_social_icons', 'options');
-    $sticky = get_field('sticky_header', 'options');
+    $hl = get_field('header_layout', 'option');
     $hideHeader = get_field('hide_page_header');
     ?>
 
-    <?php echo get_template_part('components/headers/' . $h1 . ''); ?>
+    <?php
+    $header = 'components/headers/' . $hl;
+    get_template_part($header); ?>
 
     <main role="main" class="container-fluid">
         <?php

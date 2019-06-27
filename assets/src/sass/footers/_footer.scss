@@ -142,38 +142,23 @@ footer,
     font-size: 12px;
     text-align: center;
     color: #2c2c2c;
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
-.copyright p {
-    margin-bottom: 0;
-}
-
-.copyright a:hover .incredible-marketing-logo {
-    -webkit-animation: pop .5s;
-    animation: pop .5s;
-}
-
-.copyright .incredible-marketing-logo {
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background-color: $primary;
-    border-color: $primary;
-    -webkit-transition: all .2s;
-    transition: all .2s;
+.im-logo {
+    margin-left: 5px;
+    margin-right: 4px;
+    height: 1em;
     display: inline-block;
-    margin-left: 2px;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 4px;
-}
-
-.copyright .incredible-marketing-logo svg {
-    display: block;
-    position: relative;
-    width: 15px;
-    fill: $white;
-    -webkit-transition: all .2s;
-    transition: all .2s;
-    top: 1px;
+    margin-top: -1px;
+    fill: #fff;
+    vertical-align: middle;
+    background: $magenta;
+    border-radius: 100em;
+    padding: 4px;
+    width: 25px;
+    height: 25px;
 }

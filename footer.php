@@ -2,8 +2,8 @@
 <?php
 
 $fl = get_field('footer_layout', 'option');
-
-echo get_template_part('components/footers/' . $f1 . '');
+$footer = 'components/footers/' . $fl;
+get_template_part($footer);
 
 wp_footer(); ?>
 

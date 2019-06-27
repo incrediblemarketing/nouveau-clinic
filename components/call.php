@@ -1,12 +1,7 @@
-<?php
+<?php $business_location = get_field('business_locations', 'options')[0]; ?>
 
-	$business_phone_display = get_field('business_phone_display', 'options');
-	$business_phone_url = get_field('business_phone_url', 'options');
-
-?>
-
-<?php if ($business_phone_display && $business_phone_url) : ?>
-	<a class="call" href="tel:<?php echo $business_phone_url; ?>">
-		<i class="fa fa-phone"></i> <span><?php echo $business_phone_display; ?></span>
-	</a>
+<?php if ($business_location['business_phone_display'] && $business_location['business_phone_url']) : ?>
+    <a class="call btn btn-primary" href="tel:<?php echo $business_location['business_phone_url']; ?>">
+        <i class="fa fa-phone"></i> <span><?php echo $business_location['business_phone_display']; ?></span>
+    </a>
 <?php endif; ?>

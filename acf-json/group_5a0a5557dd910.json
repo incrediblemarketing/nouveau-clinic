@@ -1,31 +1,35 @@
 {
     "key": "group_5a0a5557dd910",
     "title": "Procedure Page Addons",
-    "fields": [{
-        "key": "field_5a0a555f590a0",
-        "label": "Excerpt",
-        "name": "excerpt",
-        "type": "textarea",
-        "instructions": "",
-        "required": 0,
-        "conditional_logic": 0,
-        "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-        },
-        "default_value": "",
-        "placeholder": "",
-        "maxlength": "",
-        "rows": 3,
-        "new_lines": "wpautop"
-    }],
+    "fields": [
+        {
+            "key": "field_5a0a555f590a0",
+            "label": "Excerpt",
+            "name": "excerpt",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "wpautop"
+        }
+    ],
     "location": [
-        [{
-            "param": "post_type",
-            "operator": "==",
-            "value": "procedure"
-        }]
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "procedure"
+            }
+        ]
     ],
     "menu_order": 0,
     "position": "acf_after_title",
@@ -34,5 +38,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": ""
+    "description": "",
+    "modified": 1561654007
 }
