@@ -82,3 +82,6 @@ function incredible__register_required_plugins()
 }
 
 add_action('tgmpa_register', 'incredible__register_required_plugins');
+
+define('GF_LICENSE_KEY', 'e7280f708aaf8623fe76689956d42fc8');
+define('GF_THEME_IMPORT_FILE', '/wp-content/themes/imdesignstudio/gravity-json/gravityforms.json');
