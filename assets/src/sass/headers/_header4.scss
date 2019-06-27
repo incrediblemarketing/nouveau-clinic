@@ -55,20 +55,20 @@
     }
 
     .header-left {
-        .btn-whiteborder:first-child {
+        .btn-primary:first-child {
             margin-right: 10px;
         }
 
-        .btn-whiteborder:nth-child(2) {
+        .btn-primary:nth-child(2) {
             display: none;
 
             @include mq(xl) {
-                display: inline-block;
+                display: inline-flex;
             }
         }
     }
 
-    .btn-whiteborder {
+    .btn-primary {
         min-width: auto;
         border-width: 1px;
         font-size: 12px;
@@ -76,11 +76,12 @@
         margin: 0;
         width: 63px;
         height: 42px;
+        display: inline-flex;
 
         @include mq(sm) {
-            width: auto;
+            width: 200px;
             font-size: 1rem;
-            padding: .5em 2em !important
+            padding: 0 15px !important;
         }
 
     }
