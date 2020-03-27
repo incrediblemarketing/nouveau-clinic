@@ -9,10 +9,9 @@ html {
 
 body {
     font-family: $primary-font;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1rem;
-    line-height: 1.5em;
-    overflow-x: hidden;
+    line-height: 1.6em;
     color: $charcoal;
     background-color: $off-white;
     max-width: 100%;
@@ -81,7 +80,7 @@ textarea:focus {
     outline: none;
 }
 
-input[type=submit] {
+input[type="submit"] {
     cursor: pointer;
 }
 
@@ -104,7 +103,7 @@ button:focus {
 }
 
 p {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     z-index: 3;
 }
 
@@ -161,4 +160,12 @@ img.attachment-full {
 
 .no-overflow {
     overflow: hidden;
+}
+
+.embed-responsive {
+    margin-bottom: 35px;
+}
+
+.section__padding {
+	padding: 7vw 0;	
 }

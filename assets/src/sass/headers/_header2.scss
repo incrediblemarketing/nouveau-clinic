@@ -1,11 +1,11 @@
 #header.header2 {
-    height: 70px;
+    height: 100px;
     padding: 0 15px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba($white, .95);
+    background: rgba($white, 1);
     box-shadow: rgba($black, 0.1) 0 3px 3px;
     z-index: 99;
 
@@ -41,35 +41,47 @@
         left: 0;
         top: 0;
         width: auto;
-        height: 70px;
+        height: 100px;
         align-items: center !important;
+        margin: 0 auto;
 
         @include mq(lg) {
             display: flex;
         }
 
         .ubermenu {
-
             .ubermenu-submenu {
-                min-width: 230px;
+                width: 300px;
+                background: $white;
+                .ubermenu-target {
+                    padding: 10px 25px !important;
+                    &:hover {
+                        background: $primary;
+                        color: $white;
+                    }
+                }
+
+                i {
+                    font-weight: 600;
+                }
             }
 
-
             .ubermenu-item-level-0 {
-                >.ubermenu-target {
+                > .ubermenu-target {
                     padding: 0px 25px;
                     font-weight: 400;
-                    height: 70px;
+                    height: 100px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
 
-                    &::after {
+                    &::after,
+                    i {
                         display: none;
                     }
 
                     span::before {
-                        content: '';
+                        content: "";
                         display: block;
                         height: 2px;
                         position: absolute;
@@ -103,7 +115,6 @@
         li {
             display: inline-block;
         }
-
     }
 
     .btn {
@@ -121,10 +132,14 @@
 
         @include mq(xl) {
             right: unset;
-            height: auto;
+            height: 50px;
             width: auto;
             top: unset;
             padding: 4px 35px !important;
+        }
+
+        &:not(.call) {
+            margin-right: 15px;
         }
 
         svg,
@@ -138,6 +153,7 @@
             @include mq(xl) {
                 top: 2px;
                 left: -4px;
+                margin-right: 5px;
             }
         }
 

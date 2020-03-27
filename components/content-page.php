@@ -1,88 +1,104 @@
 <?php
-if (have_rows('sections')) :
-    while (have_rows('sections')) : the_row();
+if ( have_rows( 'sections' ) ) :
+	while ( have_rows( 'sections' ) ) :
+		the_row();
 
-        /* HERO SECTION
+		/*
+		 HERO SECTION
 			================================================*/
-        if (get_row_layout() == 'home_slider') {
-            echo get_template_part('components/blocks/home-slider');
+		if ( get_row_layout() == 'home_slider' ) {
+			echo get_template_part( 'components/blocks/home-slider' );
 
-            /* PAGE
+			/*
+			 PAGE
 			================================================*/
-        } elseif (get_row_layout() == 'page') {
-            echo get_template_part('components/blocks/page');
+		} elseif ( get_row_layout() == 'page' ) {
+			echo get_template_part( 'components/blocks/page' );
 
-            /* RELATED POSTS
+			/*
+			 RELATED POSTS
 			================================================*/
-        } elseif (get_row_layout() == 'related_posts') {
-            echo get_template_part('components/blocks/related-posts');
+		} elseif ( get_row_layout() == 'related_posts' ) {
+			echo get_template_part( 'components/blocks/related-posts' );
 
-            /* 1 COLUMN SECTION
+			/*
+			 1 COLUMN SECTION
 			================================================*/
-        } elseif (get_row_layout() == '1_column') {
-            echo get_template_part('components/blocks/column-one');
+		} elseif ( get_row_layout() == '1_column' ) {
+			echo get_template_part( 'components/blocks/column-one' );
 
-            /* 2 COLUMN SECTION
+			/*
+			 2 COLUMN SECTION
 			================================================*/
-        } elseif (get_row_layout() == '2_column') {
-            echo get_template_part('components/blocks/column-two');
+		} elseif ( get_row_layout() == '2_column' ) {
+			echo get_template_part( 'components/blocks/column-two' );
 
 
-            /* 3 COLUMN SECTION
+			/*
+			 3 COLUMN SECTION
 			================================================*/
-        } elseif (get_row_layout() == '3_column') {
-            echo get_template_part('components/blocks/column-three');
+		} elseif ( get_row_layout() == '3_column' ) {
+			echo get_template_part( 'components/blocks/column-three' );
 
-            /* 4 COLUMN SECTION
+			/*
+			 4 COLUMN SECTION
 			================================================*/
-        } elseif (get_row_layout() == '4_column') {
-            echo get_template_part('components/blocks/column-four');
+		} elseif ( get_row_layout() == '4_column' ) {
+			echo get_template_part( 'components/blocks/column-four' );
 
-            /* CALL TO ACTION
+			/*
+			 CALL TO ACTION
 			================================================*/
-        } elseif (get_row_layout() == 'call_to_action') {
-            echo get_template_part('components/blocks/cta');
+		} elseif ( get_row_layout() == 'call_to_action' ) {
+			echo get_template_part( 'components/blocks/cta' );
 
-            /* PROCEDURES ROTATOR
+			/*
+			 PROCEDURES ROTATOR
 			================================================*/
-        } elseif (get_row_layout() == 'procedures_rotator') {
-            $style = get_sub_field('procedure_style');
+		} elseif ( get_row_layout() == 'procedures_rotator' ) {
+			$style = get_sub_field( 'procedure_style' );
 
-            /* Display Grid Columns */
-            if ($style === 'grid-columns') :
-                echo get_template_part('components/blocks/procedures/grid');
+			/* Display Grid Columns */
+			if ( $style === 'grid-columns' ) :
+				echo get_template_part( 'components/blocks/procedures/grid' );
 
-            /* Row with Text Hover Up */
-            elseif ($style === 'grid') :
-                echo get_template_part('components/blocks/procedures/grid-hover-up');
+				/* Row with Text Hover Up */
+			elseif ( $style === 'grid' ) :
+				echo get_template_part( 'components/blocks/procedures/grid' );
 
-            /* Full Width Slider with Hover */
-            elseif ($style === 'hover') :
-                echo get_template_part('components/blocks/procedures/full-width-slider');
+				/* Full Width Slider with Hover */
+			elseif ( $style === 'hover' ) :
+				echo get_template_part( 'components/blocks/procedures/full-width-slider' );
 
-            /* Half Slider with Hover */
-            elseif ($style === 'half') :
-                echo get_template_part('components/blocks/procedures/half-width-slider');
+				/* Half Slider with Hover */
+			elseif ( $style === 'half' ) :
+				echo get_template_part( 'components/blocks/procedures/half-width-slider' );
 
-            /* Accordians */
-            elseif ($style === 'accordian') :
-                echo get_template_part('components/blocks/procedures/accordian');
+				/* Accordians */
+			elseif ( $style === 'accordian' ) :
+				echo get_template_part( 'components/blocks/procedures/accordian' );
 
-            /* Card Display */
-            elseif ($style === 'card') :
-                echo get_template_part('components/blocks/procedures/flip-card');
+				/* Card Display */
+			elseif ( $style === 'card' ) :
+				echo get_template_part( 'components/blocks/procedures/flip-card' );
 
-            endif;
+			endif;
 
-            /* TESTIMONIALS ROTATOR
+			/*
+			 TESTIMONIALS ROTATOR
 			======== = = ==== ==================================*/
-        } elseif (get_row_layout() == 'testimonials_rotator') {
-            echo get_template_part('components/blocks/testimonials');
+		} elseif ( get_row_layout() == 'testimonials_rotator' ) {
+			echo get_template_part( 'components/blocks/testimonials' );
 
-            /*  FAQS
-	 	 	================================================*/
-        } elseif (get_row_layout() == 'faqs') {
-            echo get_template_part('components/blocks/faqs');
-        }
-    endwhile;
+			/*
+			  FAQS
+			  ================================================*/
+		} elseif ( get_row_layout() == 'faqs' ) {
+			echo get_template_part( 'components/blocks/faqs' );
+		} elseif ( get_row_layout() == 'instagram_block' ) {
+			echo get_template_part( 'components/blocks/instagram_block' );
+		}elseif ( get_row_layout() == 'how_videos' ) {
+			echo get_template_part( 'components/blocks/how_video' );
+		}
+	endwhile;
 endif;

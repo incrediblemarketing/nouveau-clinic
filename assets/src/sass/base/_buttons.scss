@@ -1,4 +1,6 @@
-.btn {
+.btn,
+#gform_submit_button_4,
+#gform_submit_button_3 {
     position: relative;
     border-radius: 0;
     overflow: hidden;
@@ -9,7 +11,8 @@
     justify-content: center;
     padding: 0 15px;
     width: 100%;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
 
     @include mq(lg) {
         width: 250px;
@@ -25,9 +28,9 @@
 }
 
 .btn-primary {
-    background: $primary;
-    color: $white;
-    border: 1px solid $primary;
+    background: $white;
+    color: $black;
+    border: 1px solid $black;
 
     &:hover {
         background: $white;
@@ -36,12 +39,30 @@
 }
 
 .btn-secondary {
-    background: $secondary;
+    background: $white;
+    color: $off-black;
+    border: 1px solid $black;
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+}
+
+.btn-tertiary,
+#gform_submit_button_4,
+#gform_submit_button_3 {
+    background: $off-black;
     color: $white;
-    border: 1px solid $secondary;
+    border: 1px solid $off-black;
 
     &:hover {
         background: $white;
-        color: $secondary;
+        color: $black;
     }
+}
+
+#gform_submit_button_4,
+#gform_submit_button_3 {
+    width: 100% !important;
 }

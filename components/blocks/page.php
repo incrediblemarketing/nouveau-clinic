@@ -95,7 +95,7 @@ if ($showSidebar == 1) {
     } else {
         echo '<div id="sidebar" class="sidebar-right col-lg-3 col-12 ' . $sideCSS . ' sh-col">';
     }
-    echo '<div class="pad-v-md">';
+    echo '<div class="pad-v-md h-100">';
 
     dynamic_sidebar('page_sidebar');
 
@@ -115,14 +115,18 @@ if ($showSidebar == 1) {
     $showprocedures = get_sub_field('show_procedures_menu');
     $post_ID = get_the_ID();
     if ($showprocedures == 1) {
-        echo '<h5>Procedures</h5>';
+			$post_type = get_post_type();
+			echo '<div class="sidebar-item sidebar-menu-sticky">';
+			
+        echo '<h5>'.str_replace('_', ' ', $post_type).'</h5>';
         echo '<ul class="sidebar-menu">';
         if ((wp_get_post_parent_id($post_ID) == 0) || (get_post_type($post_ID) != 'procedure')) {
-            wp_list_pages(array('post_type' => 'procedure', 'title_li' => '', 'depth' => 1));
+            wp_list_pages(array('post_type' => $post_type, 'title_li' => '', 'depth' => 1));
         } else {
-            wp_list_pages(array('post_type' => 'procedure', 'title_li' => '', 'child_of' => wp_get_post_parent_id($post_ID), 'depth' => 1));
+            wp_list_pages(array('post_type' => $post_type, 'title_li' => '', 'child_of' => wp_get_post_parent_id($post_ID), 'depth' => 1));
         }
-        echo '</ul>';
+				echo '</ul>';
+			echo '</div>';
     }
 
 

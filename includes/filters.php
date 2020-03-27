@@ -19,9 +19,4 @@ function im_previous_post_link_attributes($output)
     return str_replace('<a href=', '<a ' . $attr . ' href=', $output);
 }
 add_filter('previous_post_link', 'im_previous_post_link_attributes');
-function new_excerpt_more($more)
-{
-    global $post;
-    return '<a class="read-more btn btn-primary" href="' . get_permalink($post->ID) . '">Read More</a>';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
+

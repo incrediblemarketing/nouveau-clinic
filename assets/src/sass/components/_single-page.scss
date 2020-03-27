@@ -4,7 +4,11 @@
         margin-bottom: 20px;
         border-bottom: 1px solid $primary;
         line-height: 1em;
+        color: $primary;
     }
+
+    background: url(http://dev.nouveau-clinic.com/wp-content/uploads/2020/03/big-rose-copy.png)
+        right 82% / auto no-repeat;
 }
 
 article {
@@ -44,7 +48,7 @@ article {
     font-size: 12px;
     text-transform: uppercase;
 
-    >span {
+    > span {
         margin-right: 15px;
     }
 

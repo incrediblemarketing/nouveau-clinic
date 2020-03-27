@@ -1,6 +1,4 @@
 .gallery.g3 {
-    background: #000;
-
     .inner-container {
         border: 1px solid #666;
         padding: 15px 30px;
@@ -16,7 +14,7 @@
 
         &::after {
             background-color: $primary;
-            content: '\a0';
+            content: "\a0";
             flex-grow: 1;
             height: 1px;
             position: relative;
@@ -35,7 +33,7 @@
             display: flex;
         }
 
-        >div {
+        > div {
             width: 100%;
             color: $white;
 
@@ -53,7 +51,7 @@
             }
         }
 
-        >.desc>hr:first-of-type {
+        > .desc > hr:first-of-type {
             margin-bottom: 8px;
         }
     }
@@ -112,10 +110,10 @@
         padding: 10px 35px;
         border-radius: 0;
         text-decoration: none !important;
-        background: transparent;
+        background: $primary;
         color: $white;
         border: 1px solid $white;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         top: 22px;
         left: 0;
         width: auto;
@@ -125,5 +123,17 @@
     .swiper-button-next {
         right: 0;
         left: auto;
+    }
+}
+.gallery-carousel {
+    .swiper-slide {
+        text-align: center;
+        img {
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 40vh;
+            width: auto;
+        }
     }
 }

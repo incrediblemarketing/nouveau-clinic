@@ -16,19 +16,32 @@ h1 {
         text-align: center;
 
         &::after {
-            content: '';
+            content: "";
             display: block;
             width: 150px;
             height: 2px;
             background: $primary;
             margin: 30px auto;
         }
-
     }
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    line-height: 1em;
+
+    strong {
+        color: $primary;
+        display: block;
+        font-size: 0.8em;
+    }
+
+    body:not(.home) & {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        text-transform: initial;
+    }
 }
 
 h3 {
@@ -39,6 +52,14 @@ h3 {
 
     @include mq(sm) {
         font-size: 2.6rem;
+    }
+
+    body:not(.home) & {
+        font-size: 2rem;
+				margin-bottom: 20px;
+				text-transform: initial;
+				color: $primary;
+				font-weight: 600;
     }
 }
 

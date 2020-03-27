@@ -1,6 +1,4 @@
 .gallery-archive.a2 {
-    background: #000;
-
     .inner-container {
         border: 1px solid $dark-gray;
         padding: 15px 30px;
@@ -69,7 +67,7 @@
                 }
 
                 &::after {
-                    content: '';
+                    content: "";
                     height: 110%;
                     width: 110%;
                     position: absolute;
@@ -109,7 +107,7 @@
 
         &::after {
             background-color: $primary;
-            content: '\a0';
+            content: "\a0";
             flex-grow: 1;
             height: 1px;
             position: relative;

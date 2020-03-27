@@ -12,7 +12,7 @@
         z-index: 0;
         border: 5px solid $primary;
         filter: grayscale(100%);
-        transition: all .5s ease;
+        transition: all 0.5s ease;
 
         a {
             display: flex;
@@ -31,9 +31,9 @@
         }
 
         &::before {
-            content: '';
+            content: "";
             display: block;
-            background: rgba($black, .4);
+            background: rgba($black, 0.4);
             color: $white;
             position: absolute;
             top: 0;
@@ -80,6 +80,49 @@
 
             .swiper-button-prev {
                 left: 20px;
+            }
+        }
+    }
+}
+
+.gallery--grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mq(xl) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .item {
+        a {
+            height: 300px;
+            width: 100%;
+            position: relative;
+            background: $black;
+            display: block;
+
+            img {
+                object-fit: cover;
+                height: auto;
+                min-height: 100%;
+                width: auto;
+                opacity: 0.5;
+                min-width: 100%;
+            }
+
+            h3 {
+                position: absolute;
+                top: 50% !important;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                bottom: unset !important;
+                transform: translateY(-50%) !important;
+                left: 0 !important;
             }
         }
     }

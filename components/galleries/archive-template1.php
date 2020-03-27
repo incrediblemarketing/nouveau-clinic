@@ -2,7 +2,7 @@
 	<div class="col-lg-10 col-12">
 		<div class="pad-v-md">
 			<h1 class="text-center">GALLERY</h1>
-			<div class="gallery-flex">
+			<div class="gallery--grid">
 			<?php
 				$args = array(
 					'post_type' => 'gallery',

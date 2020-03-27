@@ -6,8 +6,312 @@
     position: relative;
     z-index: 1;
 
-    >*:not(.bg-video) {
+    > *:not(.bg-video) {
         position: relative;
         z-index: 1;
+    }
+}
+
+.block--welcome,
+.block--doctor {
+    padding: 100px 0;
+    background-size: contain !important;
+    background-position: -38% !important;
+    background-color: $white;
+    .image--holder {
+        width: 100%;
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    h2 {
+        margin-bottom: 55px;
+        padding-bottom: 35px;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 4px;
+            width: 150px;
+            max-width: 50%;
+            background: $primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    h5 {
+        font-size: 1.8rem;
+        font-family: $primary-font;
+        font-weight: 600;
+        text-transform: initial;
+        margin-bottom: 25px;
+    }
+}
+
+.block--doctor {
+    padding: 150px 0;
+}
+
+.block--testimonials {
+    background: $primary;
+    color: $white;
+    padding: 150px 0;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 70px;
+        border-right: 70px solid transparent;
+        border-left: 70px solid transparent;
+        border-top: 70px solid $white;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9;
+    }
+    h2 {
+        color: $white;
+        margin-bottom: 35px;
+        position: relative;
+
+        strong {
+            color: $white;
+        }
+
+        &::after {
+            content: "\f10e";
+            font-family: $fontawesome;
+            font-size: 180px;
+            position: absolute;
+            right: 1vw;
+            top: 5vh;
+            color: $white;
+            opacity: 0.1;
+            font-weight: bold;
+            transform: rotateX(180deg);
+        }
+    }
+    h5 {
+        font-family: $primary-font;
+        text-transform: initial;
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+}
+
+.block__instagram {
+    background: $off-black;
+    color: $primary;
+    padding: 25px 0 0;
+    align-items: center;
+
+    #eapps-instagram-feed-1 {
+        padding-top: 25px;
+    }
+    h2 {
+        font-size: 1.7rem;
+        color: $primary;
+        align-items: center;
+        display: flex;
+        margin: 0;
+        i {
+            font-size: 3rem;
+            margin-right: 15px;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.7rem;
+    }
+}
+
+.block--gallery-home {
+    padding: 150px 0;
+    h2 {
+        margin-bottom: 55px;
+        padding-bottom: 35px;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 4px;
+            width: 150px;
+            max-width: 50%;
+            background: $primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.block--cta {
+    background: $off-black;
+    color: $white;
+    padding: 35px 0;
+    p {
+        margin: 0;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            margin-left: 25px;
+        }
+    }
+}
+
+.grid__procedures {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include mq(xl) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .procedure--preview {
+        border-radius: 10px;
+        background: $primary;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .card--bottom {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            h2 {
+                color: $white;
+                font-size: 1.5rem;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+.staff--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5vw 30px;
+    .block__team-member {
+        text-align: center;
+        .image--holder {
+            height: 300px;
+            width: 300px;
+            max-width: 100%;
+            position: relative;
+            border-radius: 100em;
+            overflow: hidden;
+            margin: 0 auto 25px;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                min-width: 100%;
+            }
+        }
+
+        .btn {
+            margin: 0 auto;
+        }
+    }
+}
+
+.block--blog {
+    &.content {
+        h1 {
+            margin-bottom: 50px;
+        }
+    }
+    article {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-gap: 30px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid $primary;
+
+        &:last-of-type {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            i {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+.navigation-single {
+    padding-top: 35px;
+    justify-content: center;
+    .ml-auto {
+        margin-left: 25px !important;
+    }
+    a {
+        @extend .btn;
+        @extend .btn-primary;
+        height: 90px;
+    }
+}
+.block--blog-single {
+    article .image--holder {
+        margin-bottom: 35px;
+    }
+}
+.block__contact-page {
+    p {
+        margin-bottom: 20px;
+    }
+    form {
+        li {
+            padding: 0 !important;
+        }
+        input,
+        textarea {
+            margin: 0 0 20px !important;
+            padding: 15px 20px !important;
+            border: 0 !important;
+        }
+        input[type="submit"] {
+            line-height: 1em !important;
+        }
     }
 }
