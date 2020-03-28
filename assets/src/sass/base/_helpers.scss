@@ -37,7 +37,6 @@
         overflow: visible;
         position: static;
         width: auto;
-
     }
 }
 
@@ -47,7 +46,6 @@
     */
     visibility: hidden;
 }
-
 
 /* Flex Order
    ========================================================================== */
@@ -86,7 +84,6 @@
     }
 }
 
-
 /* Images
    ========================================================================== */
 
@@ -97,7 +94,7 @@
 
     &::before,
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 10px;
     }
@@ -120,21 +117,27 @@
     }
 }
 
-
 .img.alignleft {
     margin: 0 3vw 20px 0;
 
     img {
         width: 20vw;
     }
-
 }
 
 .img.alignright {
-    margin: 0 0 20px 3vw;
+    margin: 0 auto 25px;
+    float: none;
+    @include mq(md) {
+        float: right;
+        margin: 0 0 20px 3vw;
+    }
 
     img {
-        width: 20vw;
+        width: 100%;
+        @include mq(md) {
+            width: 20vw;
+        }
     }
 }
 
@@ -206,7 +209,6 @@
                 fill: $primary;
             }
         }
-
     }
 }
 
@@ -217,9 +219,9 @@
     position: relative;
 
     &::before {
-        content: '\f10d';
+        content: "\f10d";
         font-family: $fontawesome;
-        opacity: .1;
+        opacity: 0.1;
         position: absolute;
         top: 18px;
         left: -50px;
@@ -228,9 +230,9 @@
     }
 
     &::after {
-        content: '\f10e';
+        content: "\f10e";
         font-family: $fontawesome;
-        opacity: .1;
+        opacity: 0.1;
         position: absolute;
         bottom: -18px;
         right: -50px;
@@ -249,7 +251,7 @@
         color: $white;
     }
 
-    >* {
+    > * {
         z-index: 1;
         position: relative;
     }

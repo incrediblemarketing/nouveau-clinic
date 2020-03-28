@@ -238,7 +238,18 @@
                             nextEl: '.swiper-button-next',
                             prevEl: '.swiper-button-prev'
                         }
+										});
+										
+										if($cache.window.width() < 768){
+											var mySwiper = new Swiper('.procedure__grid--container', {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        }
                     });
+										}
 
                     $('.procedures-hover').hover(function() {
                         $(this)

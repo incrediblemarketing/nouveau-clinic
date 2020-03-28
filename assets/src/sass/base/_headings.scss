@@ -9,7 +9,13 @@ h6 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.2rem;
+    @include mq(md) {
+        font-size: 3rem;
+    }
+    @include mq(xl) {
+        font-size: 4rem;
+    }
 
     &.border {
         position: relative;
@@ -27,9 +33,17 @@ h1 {
 }
 
 h2 {
-    font-size: 4.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     line-height: 1em;
+
+    @include mq(md) {
+        font-size: 3rem;
+    }
+
+    @include mq(xxl) {
+        font-size: 4.5rem;
+    }
 
     strong {
         color: $primary;
@@ -38,9 +52,12 @@ h2 {
     }
 
     body:not(.home) & {
-        font-size: 2.2rem;
+        font-size: 1.7rem;
         margin-bottom: 25px;
         text-transform: initial;
+        @include mq(md) {
+            font-size: 2.2rem;
+        }
     }
 }
 
@@ -56,10 +73,10 @@ h3 {
 
     body:not(.home) & {
         font-size: 2rem;
-				margin-bottom: 20px;
-				text-transform: initial;
-				color: $primary;
-				font-weight: 600;
+        margin-bottom: 20px;
+        text-transform: initial;
+        color: $primary;
+        font-weight: 600;
     }
 }
 
