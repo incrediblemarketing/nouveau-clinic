@@ -1,5 +1,5 @@
 #header.header2 {
-    height: 100px;
+    height: 70px;
     padding: 0 15px;
     position: fixed;
     top: 0;
@@ -8,13 +8,22 @@
     background: rgba($white, 1);
     box-shadow: rgba($black, 0.1) 0 3px 3px;
     z-index: 99;
+    @include mq(lg) {
+        height: 100px;
+    }
 
     .logo {
+        height: 50px;
+        width: 238px;
         @include mq($until: lg) {
             position: absolute;
-            top: 5px;
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
+        }
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -51,8 +60,14 @@
 
         .ubermenu {
             .ubermenu-submenu {
-                width: 300px;
+                width: 150px;
                 background: $white;
+                @include mq(xl) {
+                    width: 200px;
+                }
+                @include mq(xxl) {
+                    width: 300px;
+                }
                 .ubermenu-target {
                     padding: 10px 25px !important;
                     &:hover {
@@ -68,7 +83,7 @@
 
             .ubermenu-item-level-0 {
                 > .ubermenu-target {
-                    padding: 0px 25px;
+                    padding: 0px 1.1vw;
                     font-weight: 400;
                     height: 100px;
                     display: flex;
@@ -135,11 +150,16 @@
             height: 50px;
             width: auto;
             top: unset;
-            padding: 4px 35px !important;
+            padding: 4px 25px !important;
+            white-space: nowrap;
         }
 
         &:not(.call) {
             margin-right: 15px;
+            display: none;
+            @include mq(xl) {
+                display: flex;
+            }
         }
 
         svg,
@@ -169,4 +189,7 @@
 
 .taptap-menu-button-wrapper {
     top: 12px;
+}
+.taptap-menu-item-description {
+    display: none;
 }

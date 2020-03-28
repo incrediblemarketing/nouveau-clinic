@@ -14,13 +14,24 @@
 
 .block--welcome,
 .block--doctor {
-    padding: 100px 0;
+    padding: 80px 0;
     background-size: contain !important;
-    background-position: -38% !important;
+    background-position: -30vw bottom !important;
     background-color: $white;
+    @include mq($until: lg) {
+        background: $white !important;
+    }
+
+    @include mq(xxl) {
+        padding: 100px 0;
+        background-position: -15vw !important;
+    }
     .image--holder {
         width: 100%;
         display: block;
+        @include mq($until: md) {
+            margin-bottom: 35px;
+        }
 
         img {
             width: 100%;
@@ -28,9 +39,14 @@
         }
     }
     h2 {
-        margin-bottom: 55px;
-        padding-bottom: 35px;
+        margin-bottom: 35px;
+        padding-bottom: 25px;
         position: relative;
+
+        @include mq(xxl) {
+            margin-bottom: 55px;
+            padding-bottom: 35px;
+        }
 
         &::after {
             content: "";
@@ -61,7 +77,10 @@
 .block--testimonials {
     background: $primary;
     color: $white;
-    padding: 150px 0;
+    padding: 90px 0;
+    @include mq(lg) {
+        padding: 150px 0;
+    }
 
     &::before {
         content: "";
@@ -113,16 +132,33 @@
     color: $primary;
     padding: 25px 0 0;
     align-items: center;
+    .social-top {
+        @include mq($until: sm) {
+            display: block !important;
+            text-align: center !important;
+            p {
+                margin-bottom: 10px;
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: 10px;
+                justify-content: center;
+            }
+        }
+    }
 
     #eapps-instagram-feed-1 {
         padding-top: 25px;
     }
     h2 {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
         color: $primary;
         align-items: center;
         display: flex;
         margin: 0;
+        @include mq(xl) {
+            font-size: 1.7rem;
+        }
         i {
             font-size: 3rem;
             margin-right: 15px;
@@ -131,12 +167,18 @@
 
     p {
         margin: 0;
-        font-size: 1.7rem;
+        font-size: 1.2rem;
+        @include mq(xl) {
+            font-size: 1.7rem;
+        }
     }
 }
 
 .block--gallery-home {
-    padding: 150px 0;
+    padding: 90px 0;
+    @include mq(lg) {
+        padding: 150px 0;
+    }
     h2 {
         margin-bottom: 55px;
         padding-bottom: 35px;
@@ -152,6 +194,12 @@
             position: absolute;
             bottom: 0;
             left: 0;
+        }
+    }
+
+    img {
+        @include mq($until: md) {
+            margin-top: 35px;
         }
     }
 }
@@ -255,11 +303,15 @@
     }
     article {
         display: grid;
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 30px;
         margin-bottom: 50px;
         padding-bottom: 50px;
         border-bottom: 1px solid $primary;
+
+        @include mq(md) {
+            grid-template-columns: 300px 1fr;
+        }
 
         &:last-of-type {
             border-bottom: 0;
@@ -294,6 +346,10 @@
 .block--blog-single {
     article .image--holder {
         margin-bottom: 35px;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
 .block__contact-page {

@@ -1,4 +1,7 @@
 #sidebar {
+    @include mq($until: lg) {
+        display: none;
+    }
     h3 {
         margin: 0;
     }

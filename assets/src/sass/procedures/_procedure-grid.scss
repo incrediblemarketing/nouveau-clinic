@@ -39,6 +39,9 @@
         background-position: center center !important;
 
         @include mq(lg) {
+            min-height: 300px;
+        }
+        @include mq(xl) {
             min-height: 40vh;
         }
 

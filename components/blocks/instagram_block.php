@@ -10,7 +10,7 @@ if ( have_rows( 'social_icons', 'option' ) ) :
 endif; ?>
 
 <div class="row block__instagram justify-content-center">
-	<div class="col-xl-8 col-lg-10 col-12">
+	<div class="col-lg-10 col-12">
 		<div class="social-top d-flex align-items-center justify-content-between">
 			<h2><i class="fab fa-instagram"></i> Connect With Us</h2>
 			<p class="insta-handle">#THENOUVEAUCLINIC</p>
