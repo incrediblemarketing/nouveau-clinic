@@ -292,6 +292,10 @@
         .btn {
             margin: 0 auto;
         }
+        h5 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -334,8 +338,17 @@
 .navigation-single {
     padding-top: 35px;
     justify-content: center;
+    @include mq($until: md) {
+        display: block !important;
+    }
     .ml-auto {
         margin-left: 25px !important;
+        @include mq($until: md) {
+            margin: 15px 0 0 !important;
+        }
+        i {
+            margin: 0 0 0 8px !important;
+        }
     }
     a {
         @extend .btn;
