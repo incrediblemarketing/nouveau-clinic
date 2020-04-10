@@ -240,7 +240,7 @@
                         }
 										});
 										
-										if($cache.window.width() < 768){
+										if($cache.window.width() < 992){
 											var mySwiper = new Swiper('.procedure__grid--container', {
                         slidesPerView: 1,
                         spaceBetween: 0,

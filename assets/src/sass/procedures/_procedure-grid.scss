@@ -2,6 +2,20 @@
     margin: 0 -15px;
     position: relative;
 
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-image: none !important;
+        color: $white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mq(lg) {
+            display: none;
+        }
+    }
+
     &::before {
         content: "";
         display: block;

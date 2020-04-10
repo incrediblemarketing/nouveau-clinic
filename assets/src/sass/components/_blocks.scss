@@ -403,3 +403,17 @@
         padding-bottom: 10px;
     }
 }
+
+.grid--videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .embed-responsive {
+        margin: 0;
+    }
+}

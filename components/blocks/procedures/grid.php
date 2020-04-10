@@ -47,6 +47,8 @@ if ( $posts ) : ?>
 				</div>
 			<?php endforeach; ?>
 		</div>
+		<div class="swiper-button-next"><i class="fal fa-chevron-right"></i></div>
+    <div class="swiper-button-prev"><i class="fal fa-chevron-left"></i></div>
 	</div>
 	<?php
 	wp_reset_postdata();
