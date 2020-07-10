@@ -30,7 +30,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background: $primary;
-        mix-blend-mode: multiply;
+        background: $white;
+        mix-blend-mode: difference;
     }
 }

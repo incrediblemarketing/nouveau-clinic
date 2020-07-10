@@ -18,8 +18,6 @@ endif;
 				<p><i class="fas fa-map-marker-alt"></i> <?php echo $business_location['business_street_address']; ?>, <?php echo $business_location['business_city_state_zip']; ?><br />
 					<a href="<?php echo $business_location['business_url']; ?>" class="directions" target="_blank">Get Directions / View map <i class="fal fa-long-arrow-right"></i></a></p>
 				<p><i class="fas fa-phone"></i> <a href="tel:<?php echo $business_location['business_phone_url']; ?>"><?php echo $business_location['business_phone_display']; ?></a></p>
-				<p><i class="fas fa-fax"></i> <?php echo $business_location['business_fax']; ?></p>
-				<p><i class="fas fa-envelope"></i> <?php echo $business_location['business_email_address']; ?></p>
 				<?php get_template_part( 'components/social', 'icons' ); ?>
 			</div>
 			<div class="col-xl-2 col-md-5 col-sm-5 block__links">

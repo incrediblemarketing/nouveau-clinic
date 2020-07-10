@@ -16,7 +16,16 @@
         }
     }
 
-    >.row {
+    .svg-holder {
+        img {
+            display: block;
+            max-width: 100%;
+            width: 350px;
+            margin: 0 auto 25px;
+        }
+    }
+
+    > .row {
         padding: 10vw 0 5vw;
 
         @include mq(md) {
@@ -111,7 +120,7 @@
             .gform_footer {
                 padding: 0;
 
-                input[type=submit] {
+                input[type="submit"] {
                     background: $primary;
                     color: $white;
                     display: flex;
@@ -122,7 +131,7 @@
                     justify-content: center;
                     width: 100%;
                     border: none;
-                    transition: all .5s;
+                    transition: all 0.5s;
                     border: 1px solid $primary;
 
                     @include mq(md) {
@@ -143,8 +152,7 @@
     }
 
     &.page__contact {
-
-        >.row {
+        > .row {
             padding: 50px 0;
         }
 

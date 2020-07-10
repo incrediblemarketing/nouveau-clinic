@@ -17,10 +17,14 @@ $overlayhero = get_sub_field('slight_overlay');
     } ?>
 " id="hero" data-bg="<?php echo get_sub_field('slider_bg'); ?>">
         <?php if ($type == 'Video') { ?>
+					<?php if(get_sub_field('hero_video_url')) : ?>
+						<iframe id="bgvid" src="<?php echo get_sub_field('hero_video_url'); ?>"  allow="autoplay; fullscreen"></iframe>
+					<?php else: ?>
             <video poster="<?php echo get_sub_field('slider_bg'); ?>" id="bgvid" playsinline autoplay muted loop controls>
                 <source src="<?php echo get_sub_field('webm_file')['url']; ?>" type="video/webm">
                 <source src="<?php echo get_sub_field('mp4_file')['url']; ?>" type="video/mp4">
             </video>
+					<?php endif; ?>
         <?php } elseif ($type == 'Slider') { ?>
             <div class="swiper-container hero-rotator">
                 <div class="swiper-wrapper">

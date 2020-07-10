@@ -7,13 +7,16 @@
     align-items: center;
     justify-content: center;
     background-position: bottom !important;
+    z-index: 0;
 
     @media screen and (max-height: 650px) {
         background-position: center !important;
     }
 
-    @include mq($until: md) {
+    @include mq($until: lg) {
         text-align: center !important;
+        height: 432px;
+        margin-top: 70px;
     }
 
     &.video-overlay:before {
@@ -26,13 +29,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: -1;
         height: 100vh;
         width: 100%;
-        background: rgba(0, 0, 0, 0.4);
     }
 
-    video {
+    video,
+    #bgvid {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -40,7 +43,7 @@
         min-height: 100vh;
         width: auto;
         height: auto;
-        z-index: 1;
+        z-index: -2;
         transform: translateX(-50%) translateY(-50%);
         background-size: cover;
     }
@@ -77,6 +80,7 @@
             width: 100%;
             @include mq(md) {
                 padding: 25px;
+                margin: 30vh auto 0 0;
             }
             @include mq(lg) {
                 width: auto;
@@ -97,14 +101,10 @@
             }
 
             h1 {
-                font-size: 3em;
                 color: $white;
                 line-height: 1.1;
                 text-align: center;
                 margin-bottom: 3vh;
-                @include mq(md) {
-                    font-size: 5em;
-                }
             }
 
             .btn {
@@ -131,12 +131,8 @@
                 }
 
                 h1 {
-                    font-size: 3rem;
                     margin-bottom: 15px;
                     text-align: left;
-                    @include mq(md) {
-                        font-size: 5rem;
-                    }
                     @include mq($until: md) {
                         text-align: center;
                     }

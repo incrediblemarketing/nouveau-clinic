@@ -13,13 +13,14 @@
     }
 
     .logo {
-        height: 50px;
+        height: auto;
         width: 238px;
         @include mq($until: lg) {
             position: absolute;
-            top: 10px;
+            top: 5px;
             left: 50%;
             transform: translateX(-50%);
+            width: 207px;
         }
         img {
             width: 100%;

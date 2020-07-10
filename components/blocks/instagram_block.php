@@ -13,7 +13,7 @@ endif; ?>
 	<div class="col-lg-10 col-12">
 		<div class="social-top d-flex align-items-center justify-content-between">
 			<h2><i class="fab fa-instagram"></i> Connect With Us</h2>
-			<p class="insta-handle">#THENOUVEAUCLINIC</p>
+			<p class="insta-handle">@looknaturalatl</p>
 			<p><a class="btn btn-primary" href="<?php echo $instaLink; ?>" target="_blank" rel="noopener">View Instagram</a></p>
 		</div>
 	</div>

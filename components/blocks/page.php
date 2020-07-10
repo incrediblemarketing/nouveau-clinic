@@ -80,7 +80,7 @@ if ( $fory ) {
 
 	echo '<div class="col-xl-6 col-lg-12 col-md-6 col-12 alignright">';
 	echo '<div class="embed-responsive embed-responsive-16by9">';
-	echo '<iframe id="featured-video" class="embed-responsive-item" src="//www.youtube.com/embed/' . $youtubeID . '?enablejsapi=1&rel=0" allowfullscreen></iframe>';
+	echo '<iframe id="featured-video" class="embed-responsive-item" src="' . $youtubeID . '" allowfullscreen></iframe>';
 	echo '</div>';
 	echo '</div>';
 }
@@ -143,12 +143,12 @@ if ( $showSidebar == 1 ) {
 			$post_type = get_post_type();
 			echo '<div class="sidebar-item sidebar-menu-sticky">';
 
-		echo '<h5>' . str_replace( '_', ' ', $post_type ) . '</h5>';
+		echo '<h5>Procedures</h5>';
 		echo '<ul class="sidebar-menu">';
-		if ( ( wp_get_post_parent_id( $post_ID ) == 0 ) || ( get_post_type( $post_ID ) != 'procedure' ) ) {
+		if ( ( wp_get_post_parent_id( $post_ID ) == 0 ) ) {
 			wp_list_pages(
 				array(
-					'post_type' => $post_type,
+					'post_type' => 'procedure',
 					'title_li'  => '',
 					'depth'     => 1,
 				)
@@ -156,7 +156,7 @@ if ( $showSidebar == 1 ) {
 		} else {
 			wp_list_pages(
 				array(
-					'post_type' => $post_type,
+					'post_type' => 'procedure',
 					'title_li'  => '',
 					'child_of'  => wp_get_post_parent_id( $post_ID ),
 					'depth'     => 1,

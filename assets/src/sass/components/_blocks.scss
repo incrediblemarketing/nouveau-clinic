@@ -72,6 +72,11 @@
 
 .block--doctor {
     padding: 150px 0;
+
+    img {
+        margin: 0 auto 25px;
+        display: block;
+    }
 }
 
 .block--testimonials {
@@ -128,7 +133,6 @@
 }
 
 .block__instagram {
-    background: $off-black;
     color: $primary;
     padding: 25px 0 0;
     align-items: center;
@@ -229,10 +233,6 @@
 
     @include mq(md) {
         grid-template-columns: 1fr 1fr;
-    }
-
-    @include mq(xl) {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .procedure--preview {

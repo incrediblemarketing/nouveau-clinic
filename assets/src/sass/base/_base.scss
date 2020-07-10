@@ -167,5 +167,25 @@ img.attachment-full {
 }
 
 .section__padding {
-	padding: 7vw 0;	
+    padding: 7vw 0;
+}
+
+.mobile-only {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    @include mq(lg) {
+        display: none;
+    }
+}
+
+.small-white {
+    @include mq($until: lg) {
+        background: $white !important;
+    }
+
+    img {
+        margin: 0 auto;
+    }
 }

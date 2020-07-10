@@ -8,7 +8,7 @@ $id = get_the_ID();
 <div class="container-fluid page__top-level">
   <div class="row justify-content-center content section__padding">
     <div class="col-12 col-lg-10">
-			<h1><?php echo get_the_title(); ?></h1>
+			<h1>Services</h1>
     <?php 
       $args = array(
         'post_type'   => 'procedure',
@@ -26,7 +26,7 @@ $id = get_the_ID();
                 <?php endif; ?>
                 <div class="card--bottom">
                   <h2><?php echo get_the_title(); ?></h2>
-                  <a href="<?php echo get_the_permalink(); ?>" class="btn btn-tertiary">Learn More</a>
+                  <a href="<?php echo get_the_permalink(); ?>" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
             <?php endwhile; ?> 

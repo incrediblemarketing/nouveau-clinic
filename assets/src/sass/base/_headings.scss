@@ -11,10 +11,10 @@ h6 {
 h1 {
     font-size: 2.2rem;
     @include mq(md) {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     @include mq(xl) {
-        font-size: 4rem;
+        font-size: 3.2rem;
     }
 
     &.border {
@@ -38,11 +38,11 @@ h2 {
     line-height: 1em;
 
     @include mq(md) {
-        font-size: 3rem;
+        font-size: 2.3rem;
     }
 
     @include mq(xxl) {
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
 
     strong {

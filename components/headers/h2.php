@@ -15,7 +15,7 @@ $logo = get_field( 'logo_image', 'option' );
 			<?php if ( $hsi == 1 ) { ?>
 				<?php get_template_part( 'components/social', 'icons' ); ?>
 			<?php } ?>
-						<a href="/contact/" class="btn btn-primary">Book Now</a>
+			<a href="https://www.vagaro.com/looknatural/book-now" target="_blank" class="btn btn-primary">Book Now</a>
 			<?php get_template_part( 'components/call' ); ?>
 		</div>
 	</div>
