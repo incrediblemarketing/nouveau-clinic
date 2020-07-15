@@ -47,7 +47,9 @@
                         var href = $(this).attr('href'),
                             scrollPoint = $(href).offset();
                         $('html, body').animate({scrollTop: scrollPoint.top}, 300);
-                    });
+										});
+										
+										$('#menu-item-1379 a').attr("target","_blank");
                 },
                 dataCss: function() {
                     $('[data-bg]').each(function() {
